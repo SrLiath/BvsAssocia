@@ -236,6 +236,11 @@
             font-size: 20px;
         }
 
+        .equifaxlogo {
+            width: 300px;
+            object-fit: contain;
+        }
+
         .inputs {
             display: flex;
             align-items: center;
@@ -325,7 +330,7 @@
             border: 3px solid #4A96D2;
             position: relative;
             flex-direction: column;
-            height: 270px;
+            height: 300px;
             width: 230px;
             border-top-right-radius: 20px;
             border-bottom-left-radius: 20px;
@@ -360,6 +365,26 @@
             margin-bottom: 10px;
             font-size: 12px;
             font-weight: 600;
+        }
+
+        .conteudo-detalhado .compre {
+            width: 90%;
+            height: 35px;
+            background-color: #4A96D2;
+            color: white;
+            margin-top: 0px;
+            border-radius: 25px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-bottom: 0px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .conteudo-detalhado p {
+            color: #002D44
         }
 
         .containerPreco .detalhes {
@@ -911,6 +936,8 @@
             width: 100%;
             gap: 10px;
             margin: 50px 0px;
+            margin-top: 10px;
+
         }
 
         .info-card {
@@ -978,9 +1005,8 @@
             <span></span>
         </div>
         <div class="menu">
-            <div class="imgmoba"
-                style=" text-align: left; background-color: #002334; display: flex; width: 100%; margin: 0px; padding-top: 20px; padding-bottom: 20px; "
-                onclick="toggleMenu()">
+            <div class="imgmoba" onclick="toggleMenu()"
+                style=" text-align: left; background-color: #002334; display: flex; width: 100%; margin: 0px;  justify-content: center;">
                 <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/logo.png" class="logo" style="
                        height: 80%;
                        width: 100%;
@@ -988,7 +1014,17 @@
                         display: block;
                         margin: 0;
                         margin-left: 10px;
-                        position: relative;" alt="Logo" />
+                        position: relative;" alt="Logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="margin: 10px 20px;">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.62615 4.62624C5.01667 4.23571 5.64983 4.23571 6.04036 4.62624L27.3737 25.9596C27.7642 26.3501 27.7642 26.9833 27.3737 27.3738C26.9832 27.7643 26.35 27.7643 25.9595 27.3738L4.62615 6.04045C4.23562 5.64993 4.23562 5.01676 4.62615 4.62624Z"
+                        fill="white"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M27.3737 4.62624C27.7642 5.01676 27.7642 5.64993 27.3737 6.04045L6.04036 27.3738C5.64983 27.7643 5.01667 27.7643 4.62615 27.3738C4.23562 26.9833 4.23562 26.3501 4.62615 25.9596L25.9595 4.62624C26.35 4.23571 26.9832 4.23571 27.3737 4.62624Z"
+                        fill="white"></path>
+                </svg>
+
             </div>
             <div class="menute">
 
@@ -1085,7 +1121,7 @@
 
             <div class="textodolado">
                 <h1>
-                    <red>Equifax | BoaVista</red>
+                    <img class="equifaxlogo" src="./imgs/equifaxboa.png" alt="">
                 </h1>
                 <h2 style="color:#002D44">
                     <b>
@@ -1163,21 +1199,20 @@
                 .banner .highlight {
                     font-weight: bold;
                 }
+
+                .fale {
+                    width: 50%;
+                    height: 40px;
+                    border-radius: 15px;
+                }
             </style>
             <div class="banner">
 
-                <h1>Equifax | BoaVista</h1>
+                <h1><img class="equifaxlogo" src="./imgs/equifaxboa.png" alt=""></h1>
                 <h2>Soluções inovadoras em todo seu ciclo de crédito</h2>
-                <h3>Consultas de CPF ou CNPJ para análises mais precisas e inteligentes:</h3>
-                <ul>
-                    <li>Consultas <span class="highlight">avulsas</span> ou <span class="highlight">em pacotes</span>
-                    </li>
-                    <li>Concessão de Crédito</li>
-                    <li>Análises de Score</li>
-                    <li>Negativação</li>
-                    <li>Protestos</li>
-                    <li>Notificações e muito mais</li>
-                </ul>
+                <h6>Pacotes personalizados<br>
+                    para o seu negócio!</h6>
+
             </div>
             <div class="formulario">
                 <div class="inputs">
@@ -1252,6 +1287,18 @@
 
     </div>
     <div class="d-flex position-relative w-100 h-100 imgdesk">
+        <img class="img" src="./imgs/topNew.png">
+
+    </div>
+    <div class="center d-flex justify-content-center align-items-center ">
+
+        <a href=""
+            style="background-color: #FEC553; border-radius: 30px; height: 40px; text-align: center; padding: 1px 50px; color:#002D44; font-weight: 600;"
+            class="d-flex justify-content-center align-items-center mt-4 mb-4">Solicite
+            contato</a>
+
+    </div>
+    <div class="d-flex position-relative w-100 h-100 imgdesk">
         <img class="img" src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/gestao.png">
 
     </div>
@@ -1283,7 +1330,7 @@
 
         </div>
         <div class="d-flex justify-content-center bottom-0" style="width: 100%">
-            <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/motion.gif" style="width: 800px; height: auto; object-fit: contain; position: absolute;  margin-right: 10px;
+            <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/motion2.gif" style="height: '100%'; object-fit: contain; position: absolute;  margin-right: 10px;
                 bottom: 0px" alt="">
 
         </div>
@@ -1304,7 +1351,7 @@
                 dados atualizados e
                 confiáveis de novos parceiros<br><strong>&check;</strong> Garanta mais economia para o seu negócio
             </p>
-            <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/motion.gif" style="width: 100vw;">
+            <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/motion2.gif" style="width: 100vw;">
             <div class="d-flex justify-content-center align-items-center">
                 <div class=" ladogif" style="display: flex; justify-content: center; align-items: center; gap: 7px;">
                     <a href=""
@@ -1378,124 +1425,392 @@
 
     <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/pacotesMoba.png" class="imgmoba"
         style="width: 90vw; margin: 25px">
-    <div class="mt-5">
-        <div id="carouselPrec" class="carousel slide imgmoba" data-bs-ride="carousel">
-            <div class="carousel-inner">
+    <div class="mt-5 w-100">
+        <div id="carouselPrec" class="carousel slide imgmoba center" data-bs-ride="carousel">
+            <div class="carousel-inner" style="width: 60%!important;">
+                <!-- Item 1 -->
                 <div class="carousel-item active">
-                    <div class="p-2 containerPreco center w-100">
+                    <div class="conteudo-inicial p-2 containerPreco center w-100">
                         <p><strong>R$<preco>60</preco><br>em créditos</strong></p>
                         <a class="compre">Comprar este pacote</a>
-                        <a class="detalhes">Mais detalhes</a>
-                        <a class="fundo">Ideal para pequenos negocios</a>
-
+                        <a class="detalhes" href="#">Mais detalhes</a>
+                        <a class="fundo">Ideal para pequenos negócios</a>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="p-2 containerPreco center w-100">
-                        <p><strong>R$<preco>130</preco><br>&nbsp;&nbsp;&nbsp;&nbsp;em créditos</strong></p>
+
+                    <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                        style="display: none; position: relative;">
+                        <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z"
+                                    fill="#32ADE6" />
+                            </svg>
+                        </a>
+                        <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                                realizar:</strong></p>
+                        <p style="line-height: 15px;">
+                            <span style="display: block;"><b>&check;</b> 1 Consulta com Recomendação CPF ou CNPJ</span>
+                            <span style="display: block;"><b>&check;</b> ou 1 Consulta Completa</span>
+                            <span style="display: block;"><b>&check;</b> ou 2 Consultas Intermediárias</span>
+                            <span style="display: block;"><b>&check;</b> ou 7 Consultas de</span>
+                            <span style="display: block;">Confirmação Cadastral</span>
+                        </p>
                         <a class="compre">Comprar este pacote</a>
-                        <a class="detalhes">Mais detalhes</a>
-                        <a class="fundo">Ideal para pequenos negocios</a>
 
                     </div>
                 </div>
+
+                <!-- Item 2 -->
                 <div class="carousel-item">
-                    <div class="p-2 containerPreco center w-100">
-                        <p><strong>R$<preco>250</preco><br>&nbsp;&nbsp;&nbsp;&nbsp;em créditos</strong></p>
+                    <div class="conteudo-inicial p-2 containerPreco center w-100">
+                        <p><strong>R$<preco>130</preco><br>em créditos</strong></p>
                         <a class="compre">Comprar este pacote</a>
-                        <a class="detalhes">Mais detalhes</a>
-                        <a class="fundo">Ideal para pequenos negocios</a>
+                        <a class="detalhes" href="#">Mais detalhes</a>
+                        <a class="fundo">Ideal para negócios em crescimento</a>
+                    </div>
 
+                    <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                        style="display: none; position: relative;">
+                        <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z"
+                                    fill="#32ADE6" />
+                            </svg>
+                        </a>
+                        <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                                realizar:</strong></p>
+                        <p style="line-height: 15px;">
+                            <span style="display: block;"><b>&check;</b> 2 Consultas com Recomendação CPF ou CNPJ</span>
+                            <span style="display: block;"><b>&check;</b> ou 3 Consultas Completas</span>
+                            <span style="display: block;"><b>&check;</b> ou 5 Consultas Intermediárias</span>
+                            <span style="display: block;"><b>&check;</b> ou 18 Consultas de Confirmação Cadastral</span>
+                        </p>
+
+                        <a class="compre">Comprar este pacote</a>
                     </div>
                 </div>
+
+                <!-- Item 3 -->
                 <div class="carousel-item">
-                    <div class="p-2 containerPreco center w-100">
-                        <p><strong>R$<preco>500</preco><br>&nbsp;&nbsp;&nbsp;&nbsp;em créditos</strong></p>
+                    <div class="conteudo-inicial p-2 containerPreco center w-100">
+                        <p><strong>R$<preco>250</preco><br>em créditos</strong></p>
                         <a class="compre">Comprar este pacote</a>
-                        <a class="detalhes">Mais detalhes</a>
-                        <a class="fundo">Ideal para pequenos negocios</a>
+                        <a class="detalhes" href="#">Mais detalhes</a>
+                        <a class="fundo">Ideal para negócios estabelecidos</a>
+                    </div>
 
+                    <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                        style="display: none; position: relative;">
+                        <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z"
+                                    fill="#32ADE6" />
+                            </svg>
+                        </a>
+                        <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                                realizar:</strong></p>
+                        <p style="line-height: 15px;">
+                            <span style="display: block;"><b>&check;</b> 5 Consultas com</span>
+                            <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                            <span style="display: block;"><b>&check;</b> ou 5 Consultas Completas</span>
+                            <span style="display: block;"><b>&check;</b> ou 9 Consultas Intermediárias</span>
+                            <span style="display: block;"><b>&check;</b> ou 32 Consultas de</span>
+                            <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                        </p>
+
+                        <a class="compre">Comprar este pacote</a>
                     </div>
                 </div>
+
+                <!-- Item 4 -->
                 <div class="carousel-item">
-                    <div class="p-2 containerPreco center w-100">
-                        <p><strong>R$<preco>750</preco><br>&nbsp;&nbsp;&nbsp;&nbsp;em créditos</strong></p>
+                    <div class="conteudo-inicial p-2 containerPreco center w-100">
+                        <p><strong>R$<preco>500</preco><br>em créditos</strong></p>
                         <a class="compre">Comprar este pacote</a>
-                        <a class="detalhes">Mais detalhes</a>
-                        <a class="fundo">Ideal para pequenos negocios</a>
+                        <a class="detalhes" href="#">Mais detalhes</a>
+                        <a class="fundo">Ideal para empresas em expansão</a>
+                    </div>
 
+                    <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                        style="display: none; position: relative;">
+                        <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z"
+                                    fill="#32ADE6" />
+                            </svg>
+                        </a>
+                        <p style="line-height: 15px;">
+                            <span style="display: block;"><b>&check;</b> 7 Consultas com</span>
+                            <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                            <span style="display: block;"><b>&check;</b> ou 6 Consultas com</span>
+                            <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
+                            <span style="display: block;"><b>&check;</b> ou 8 Consultas Completas</span>
+                            <span style="display: block;"><b>&check;</b> ou 13 Consultas Intermediárias</span>
+                            <span style="display: block;"><b>&check;</b> ou 48 Consultas de</span>
+                            <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                        </p>
+
+                        <a class="compre">Comprar este pacote</a>
                     </div>
                 </div>
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="3"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="4"
-                        aria-label="Slide 3"></button>
+
+                <!-- Item 5 -->
+                <div class="carousel-item">
+                    <div class="conteudo-inicial p-2 containerPreco center w-100">
+                        <p><strong>R$<preco>750</preco><br>em créditos</strong></p>
+                        <a class="compre">Comprar este pacote</a>
+                        <a class="detalhes" href="#">Mais detalhes</a>
+                        <a class="fundo">Ideal para grandes negócios</a>
+                    </div>
+
+                    <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                        style="display: none; position: relative;">
+                        <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z"
+                                    fill="#32ADE6" />
+                            </svg>
+                        </a>
+                        <p style="line-height: 15px;">
+                            <span style="display: block;"><b>&check;</b> 14 Consultas com</span>
+                            <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                            <span style="display: block;"><b>&check;</b> ou 13 Consultas com</span>
+                            <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
+                            <span style="display: block;"><b>&check;</b> ou 16 Consultas Completas</span>
+                            <span style="display: block;"><b>&check;</b> ou 27 Consultas Intermediárias</span>
+                            <span style="display: block;"><b>&check;</b> ou 95 Consultas de</span>
+                            <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                        </p>
+
+                        <a class="compre">Comprar este pacote</a>
+                    </div>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="3"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="4"
+                            aria-label="Slide 3"></button>
+                    </div>
                 </div>
             </div>
+
         </div>
         <div class="container-fluid d-flex justify-content-center mt-md-5 mb-md-5 imgdesk">
-            <div class=" row justify-content-center gx-2" style="max-width: 100vw;">
+            <div class="row justify-content-center gx-2" style="max-width: 100vw;">
+                <!-- Item 1 -->
                 <div class="col-auto">
-                    <div class="p-2 containerPreco center">
+                    <div class="conteudo-inicial p-2 containerPreco center">
                         <p><strong>R$<preco>60</preco><br>em créditos</strong></p>
                         <a class="compre">Comprar este pacote</a>
-                        <a class="detalhes">Mais detalhes</a>
-                        <a class="fundo">Ideal para pequenos negocios</a>
+                        <a class="detalhes" href="#">Mais detalhes</a>
+                        <a class="fundo">Ideal para pequenos negócios</a>
+                    </div>
+                    <div class="conteudo-detalhado p-2 containerPreco center"
+                        style="display: none; position: relative;">
+                        <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z"
+                                    fill="#32ADE6" />
+                            </svg>
+                        </a>
+                        <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                                realizar:</strong></p>
+                        <p style="line-height: 15px;">
+                            <span style="display: block;"><b>&check;</b> 1 Consulta com Recomendação CPF ou CNPJ</span>
+                            <span style="display: block;"><b>&check;</b> ou 1 Consulta Completa</span>
+                            <span style="display: block;"><b>&check;</b> ou 2 Consultas Intermediárias</span>
+                            <span style="display: block;"><b>&check;</b> ou 7 Consultas de</span>
+                            <span style="display: block;">Confirmação Cadastral</span>
+                        </p>
+
+                        <a class="compre">Comprar este pacote</a>
 
                     </div>
                 </div>
+
+                <!-- Item 2 -->
                 <div class="col-auto">
-                    <div class="p-2 containerPreco center">
-                        <p><strong>R$<preco>130</preco><br>&nbsp;&nbsp;&nbsp;&nbsp;em créditos</strong></p>
+                    <div class="conteudo-inicial p-2 containerPreco center">
+                        <p><strong>R$<preco>130</preco><br>em créditos</strong></p>
                         <a class="compre">Comprar este pacote</a>
-                        <a class="detalhes">Mais detalhes</a>
-                        <a class="fundo">Ideal para pequenos negocios</a>
+                        <a class="detalhes" href="#">Mais detalhes</a>
+                        <a class="fundo">Ideal para negócios em crescimento</a>
+                    </div>
+                    <div class="conteudo-detalhado p-2 containerPreco center"
+                        style="display: none; position: relative;">
+                        <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z"
+                                    fill="#32ADE6" />
+                            </svg>
+                        </a>
+                        <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                                realizar:</strong></p>
+                        <p style="line-height: 15px;">
+                            <span style="display: block;"><b>&check;</b> 2 Consultas com Recomendação CPF ou CNPJ</span>
+                            <span style="display: block;"><b>&check;</b> ou 3 Consultas Completas</span>
+                            <span style="display: block;"><b>&check;</b> ou 5 Consultas Intermediárias</span>
+                            <span style="display: block;"><b>&check;</b> ou 18 Consultas de Confirmação Cadastral</span>
+                        </p>
+
+                        <a class="compre">Comprar este pacote</a>
 
                     </div>
                 </div>
-                <div class="col-auto">
-                    <div class="p-2 containerPreco center">
-                        <p><strong>R$<preco>250</preco><br>&nbsp;&nbsp;&nbsp;&nbsp;em créditos</strong></p>
-                        <a class="compre">Comprar este pacote</a>
-                        <a class="detalhes">Mais detalhes</a>
-                        <a class="fundo">Ideal para pequenos negocios</a>
 
+                <!-- Item 3 -->
+                <div class="col-auto">
+                    <div class="conteudo-inicial p-2 containerPreco center">
+                        <p><strong>R$<preco>250</preco><br>em créditos</strong></p>
+                        <a class="compre">Comprar este pacote</a>
+                        <a class="detalhes" href="#">Mais detalhes</a>
+                        <a class="fundo">Ideal para negócios em expansão</a>
+                    </div>
+                    <div class="conteudo-detalhado p-2 containerPreco center"
+                        style="display: none; position: relative;">
+                        <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z"
+                                    fill="#32ADE6" />
+                            </svg>
+                        </a>
+                        <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                                realizar:</strong></p>
+                        <p style="line-height: 15px;">
+                            <span style="display: block;"><b>&check;</b> 5 Consultas com</span>
+                            <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                            <span style="display: block;"><b>&check;</b> ou 5 Consultas Completas</span>
+                            <span style="display: block;"><b>&check;</b> ou 9 Consultas Intermediárias</span>
+                            <span style="display: block;"><b>&check;</b> ou 32 Consultas de</span>
+                            <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                        </p>
+
+                        <a class="compre">Comprar este pacote</a>
                     </div>
                 </div>
-                <div class="col-auto">
-                    <div class="p-2 containerPreco center">
-                        <p><strong>R$<preco>500</preco><br>&nbsp;&nbsp;&nbsp;&nbsp;em créditos</strong></p>
-                        <a class="compre">Comprar este pacote</a>
-                        <a class="detalhes">Mais detalhes</a>
-                        <a class="fundo">Ideal para pequenos negocios</a>
 
+                <!-- Item 4 -->
+                <div class="col-auto">
+                    <div class="conteudo-inicial p-2 containerPreco center">
+                        <p><strong>R$<preco>500</preco><br>em créditos</strong></p>
+                        <a class="compre">Comprar este pacote</a>
+                        <a class="detalhes" href="#">Mais detalhes</a>
+                        <a class="fundo">Ideal para empresas estabelecidas</a>
+                    </div>
+                    <div class="conteudo-detalhado p-2 containerPreco center"
+                        style="display: none; position: relative;">
+                        <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z"
+                                    fill="#32ADE6" />
+                            </svg>
+                        </a>
+                        <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                                realizar:</strong></p>
+                        <p style="line-height: 15px;">
+                            <span style="display: block;"><b>&check;</b> 7 Consultas com</span>
+                            <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                            <span style="display: block;"><b>&check;</b> ou 6 Consultas com</span>
+                            <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
+                            <span style="display: block;"><b>&check;</b> ou 8 Consultas Completas</span>
+                            <span style="display: block;"><b>&check;</b> ou 13 Consultas Intermediárias</span>
+                            <span style="display: block;"><b>&check;</b> ou 48 Consultas de</span>
+                            <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                        </p>
+
+                        <a class="compre">Comprar este pacote</a>
                     </div>
                 </div>
-                <div class="col-auto">
-                    <div class="p-2 containerPreco center">
-                        <p><strong>R$<preco>750</preco><br>&nbsp;&nbsp;&nbsp;&nbsp;em créditos</strong></p>
-                        <a class="compre">Comprar este pacote</a>
-                        <a class="detalhes">Mais detalhes</a>
-                        <a class="fundo">Ideal para pequenos negocios</a>
 
+                <!-- Item 5 -->
+                <div class="col-auto">
+                    <div class="conteudo-inicial p-2 containerPreco center">
+                        <p><strong>R$<preco>750</preco><br>em créditos</strong></p>
+                        <a class="compre">Comprar este pacote</a>
+                        <a class="detalhes" href="#">Mais detalhes</a>
+                        <a class="fundo">Ideal para grandes empresas</a>
+                    </div>
+                    <div class="conteudo-detalhado p-2 containerPreco center"
+                        style="display: none; position: relative;">
+                        <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z"
+                                    fill="#32ADE6" />
+                            </svg>
+                        </a>
+                        <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                                realizar:</strong></p>
+                        <p style="line-height: 15px;">
+                            <span style="display: block;"><b>&check;</b> 14 Consultas com</span>
+                            <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                            <span style="display: block;"><b>&check;</b> ou 13 Consultas com</span>
+                            <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
+                            <span style="display: block;"><b>&check;</b> ou 16 Consultas Completas</span>
+                            <span style="display: block;"><b>&check;</b> ou 27 Consultas Intermediárias</span>
+                            <span style="display: block;"><b>&check;</b> ou 95 Consultas de</span>
+                            <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                        </p>
+
+                        <a class="compre">Comprar este pacote</a>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <div class="w-100 d-flex justify-content-center align-items-center linha fs-6 fw-bold text-center mb-md-5 imgdesk"
             style="height: 30px;">
             <p class="mb-0">Explore essas e muitas outras opções de pacotes que se encaixam perfeitamente às suas
                 necessidades.</p>
         </div>
+        <script>
+            $(document).ready(function () {
+                // Alterna para o conteúdo detalhado ao clicar em "Mais detalhes"
+                $('.col-auto').on('click', '.detalhes', function (event) {
+                    event.preventDefault();
+                    var currentItem = $(this).closest('.col-auto');
+                    currentItem.find('.conteudo-inicial').hide();
+                    currentItem.find('.conteudo-detalhado').show();
+                });
 
+                // Alterna de volta para o conteúdo inicial ao clicar no SVG de "Voltar"
+                $('.col-auto').on('click', '.voltar', function (event) {
+                    event.preventDefault();
+                    var currentItem = $(this).closest('.col-auto');
+                    currentItem.find('.conteudo-detalhado').hide();
+                    currentItem.find('.conteudo-inicial').show();
+                });
+                $('.carousel-item').on('click', '.detalhes', function (event) {
+                    event.preventDefault();
+                    var currentItem = $(this).closest('.carousel-item');
+                    currentItem.find('.conteudo-inicial').hide();
+                    currentItem.find('.conteudo-detalhado').show();
+                });
+
+                // Alterna de volta para o conteúdo inicial ao clicar no SVG de "Voltar"
+                $('.carousel-item').on('click', '.voltar', function (event) {
+                    event.preventDefault();
+                    var currentItem = $(this).closest('.carousel-item');
+                    currentItem.find('.conteudo-detalhado').hide();
+                    currentItem.find('.conteudo-inicial').show();
+                });
+            });
+
+        </script>
         <div class="container-fluid center text-align flex-column">
             <h3 class="fw-bolder text-center w-100">Confira nossas consultas pré-pagas personalizadas:</h3>
             <div class="botoes mt-md-5 mb-md-5">
@@ -1947,6 +2262,13 @@
         @media (max-width: 1000px) {
             .modal-body {
                 flex-direction: column;
+            }
+
+            .duviudasx {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
             }
 
             .info-card {
@@ -2689,6 +3011,18 @@
             clientes em primeiro lugar.
         </p>
     </div>
+    <h1 style="/* Corpo Final */
+    font-weight: 800;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #9E1B32;
+    
+    ">
+        Consulte agora ou cadastre-se gratuitamente
+    </h1>
     <div class="box-container">
         <div class="info-card">
             <h6>Já possuo cadastro na Associação Comercial de São Paulo e código do associado</h6>
@@ -2766,9 +3100,10 @@
         });
     </script>
 
-    <div class="center mb-5">
+    <div class="center mb-5 flex-column">
 
-
+        <h1 style="text-align: center; font-weight: 700;"> Assista e confira como nossas soluções ajudam<br>
+            seu negócio em todas as etapas do seu ciclo de crédito!</h1>
         <div style="width: 90vw; max-width: 800px; aspect-ratio: 16 / 9; border-radius: 30px;
 overflow: hidden;">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jhGXuS_nMOo?si=zSVBIxRYelQOJz5Q"
@@ -2783,7 +3118,7 @@ overflow: hidden;">
             <red>
                 <h1 style="text-align: center; font-weight: 800 !important;">
                     Associação Comercial<br>
-                    de São Paulo e Equifax | BoaVista Inteligência de dados para empresas
+                    de São Paulo e Equifax | BoaVista Inteligência de dados para empresas<br>
                 </h1>
             </red>
         </strong>
@@ -2837,44 +3172,265 @@ overflow: hidden;">
             </div>
         </div>
     </div>
-    <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/final.png" class="imgdesk"
-        style="width: 100vw; height: auto;" />
-    <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/mobafim.png" class="imgmoba"
-        style="width: 100vw; height: auto;" />
-    <div id="caroasoca" class="carousel slide imgmoba" data-bs-ride="carousel">
-        <div class="carousel-inner" style="overflow: visible;">
-            <div class="carousel-item active ">
-                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/consu/1.png"
-                    style="object-fit: contain; width: 40%; margin:  0px 30%">
-            </div>
-            <div class="carousel-item ">
-                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/consu/2.png"
-                    style="object-fit: contain; width: 40%; margin:  0px 30%">
-            </div>
-            <div class="carousel-item ">
-                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/consu/3.png"
-                    style="object-fit: contain; width: 40%; margin:  0px 30%">
-            </div>
+    <img src="./imgs/newFim.png" class="imgdesk" style="width: 100vw; height: auto;" />
+    </div>
+    <style>
+        .bg-custom-red {
+            background-color: #EAEAEA;
+            padding: 30px 0px 0px 5%;
+        }
 
+        .bodyaccordion {
+            background-color: #EAEAEA;
+        }
 
+        .accordion-item {
+            border: none;
+            border-bottom: 1px solid #EAEAEA;
+            border-bottom-width: 1px;
+            border-bottom-color: #4A96D2;
+        }
 
-            <div class="carousel-indicators" style="margin-bottom: -1rem;">
-                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        .accordion-button {
+            background-color: transparent;
+            color: #333;
+            font-weight: 500;
+            padding: 1rem 1.25rem;
+            background-color: #EAEAEA;
+            border-bottom-width: 3px;
+            border-bottom-color: #333;
+
+        }
+
+        .accordion-button:hover {
+            background-color: transparent;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #EAEAEA;
+            color: #333;
+            box-shadow: none;
+        }
+
+        .accordion-button::after {
+            flex-shrink: 0;
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-left: auto;
+            content: "+";
+            background-image: none;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform .2s ease-in-out;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            content: "-";
+            transform: rotate(0deg);
+            background-image: none;
+        }
+
+        .accordion-body {
+            padding: 1rem 1.25rem;
+            background-color: #EAEAEA;
+        }
+
+        .card {
+            border-radius: 0px;
+            border-width: 0px;
+            padding-right: 7%;
+            background-color: #EAEAEA;
+
+        }
+    </style>
+    <div class="row justify-content-center w-100">
+        <div class="col-md-12 m-0 p-0">
+            <div class="card shadow">
+                <div class="row g-0">
+                    <div class="col-md-4 bg-custom-red text-white">
+                        <h2 class="fw-bold duviudasx" style="color: #9E1B32">Dúvidas<br>frequentes</h2>
+                        <hr class="border-light my-4">
+                    </div>
+                    <div class="col-md-8 p-4 bodyaccordion">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne">
+                                        <b>O serviço da Equifax | BoaVista realiza consultas de CPF para pessoas
+                                            físicas?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Sim, para realizar a consulta do seu CPF, procure uma de nossas distritais
+                                        ou uma agência dos Correios e solicite uma consulta Equifax | Boa Vista.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo">
+                                        <b>O serviço da Equifax | BoaVista realiza consultas de CPF para pessoas
+                                            físicas?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Empresas de todos os portes e segmentos que precisam tomar decisão de
+                                        conceder crédito ou vender a prazo.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree">
+                                        <b>O que preciso para contratar o serviço da Equifax | BoaVista?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Como é necessário ser Pessoa Jurídica para contratar o serviço da Equifax |
+                                        BoaVista, precisamos dos dados da empresa e da pessoa física que está
+                                        contratando em nome desta empresa.
+                                        Dados da empresa contratante: CNPJ.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour">
+                                        <b>Como consultar CPF e CNPJ pode ajudar minha empresa?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Conhecendo os débitos e indicadores de consumo que o seu cliente possui, sua
+                                        empresa reduz a chance de fechar negócio com clientes que possuem restrições
+                                        e evita gastos futuros com cobrança e negativação. A Equifax | BoaVista
+                                        fornece dados relevantes que te ajudam a tomar decisões mais assertivas.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive">
+                                        <b>O que preciso para realizar uma consulta?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Após contratar o plano que melhor se encaixe na sua necessidade, você
+                                        receberá
+                                        um login e senha para acessar o portal. Após logar, para realizar a consulta
+                                        será necessário apenas o número do documento, podendo ser CPF para Pessoa
+                                        Física
+                                        ou CNPJ para Pessoa Jurídica.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix">
+                                        <b>Quais as informações disponíveis na Consulta de CPF?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Dados cadastrais, restritivos e comportamentais; Score e recomendação de
+                                        crédito; e Indicadores positivos como faturas em atraso, contratos recentes,
+                                        pontualidade e adiantamento de pagamentos e grau de comprometimento futuro.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSeven">
+                                        <b>Quais as informações disponíveis na Consulta de CNPJ?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Dados cadastrais e restritivos; Participações e quadro societário; Score e
+                                        recomendação de crédito; Indicadores positivos como crédito obtido,
+                                        pontualidade
+                                        de pagamentos e comprometimento futuro.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseEight">
+                                        <b>O que é o Score?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseEight" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        O Score é a sua pontuação de crédito. Todas as contas em seu nome, pagas ou
+                                        não,
+                                        fazem parte dessa nota. As empresas usam o Score para analisar o risco e
+                                        conceder crédito. A pontuação varia de 1 a 1.000 e quanto maior melhor.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseNine">
+                                        <b>Qual a diferença entre os pacotes e o pré-pago?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseNine" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        As consultas no pacote são mais baratas do que nas recargas pré-pagas,
+                                        ajudando
+                                        você a economizar! Além disso, os pacotes podem incluir serviços de
+                                        notificação
+                                        e negativação de clientes inadimplentes, aumentando suas chances de
+                                        recuperação
+                                        de dívidas.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="center d-flex justify-content-center align-items-center ">
+    <script>document.addEventListener('DOMContentLoaded', function () {
+            var accordionItems = document.querySelectorAll('.accordion-item');
 
-        <a href=""
-            style="background-color: #FEC553; border-radius: 30px; height: 40px; text-align: center; padding: 1px 50px; color:#002D44; font-weight: 600;"
-            class="d-flex justify-content-center align-items-center mt-4 mb-4">Solicite
-            contato</a>
-
-    </div>
-    <div class="footer">
+            accordionItems.forEach(function (item) {
+                item.addEventListener('show.bs.collapse', function () {
+                    accordionItems.forEach(function (otherItem) {
+                        if (otherItem !== item) {
+                            var collapse = bootstrap.Collapse.getInstance(otherItem.querySelector('.accordion-collapse'));
+                            if (collapse) collapse.hide();
+                        }
+                    });
+                });
+            });
+        });</script>
+    <div class="footer w-100">
         <div class="row container-fluid" style="width: 100vw;">
             <div class="col-md-3"></div>
             <div class="col-md-3  d-flex align-items-center justify-content-center ">
@@ -2972,7 +3528,7 @@ overflow: hidden;">
             </div>
             <div class="col-md-3"></div>
         </div>
-        <div class="container">
+        <div style="background-color: #002334; width: 100%; align-items: center;padding-top: 15px;">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center fotlogo">
                     <img src="https://acsp.com.br/public/upload/gallery/lp-associativismo-imgs/logo.png" class="logo"
