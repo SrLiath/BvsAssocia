@@ -8,7 +8,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -33,7 +32,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
 
     <!-- scripts -->
-    <script src="https://acsp.com.br/public/template/ads/bvs-acconsulta-pages/js/functions.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PBH38WGJ5"></script>
 
     <script>
@@ -47,8 +45,11 @@
 
         gtag('config', 'G-5PBH38WGJ5');
 
+
+
     </script>
 
+    <script src="https://acsp.com.br/public/template/ads/bvs-acconsulta-pages/js/functions.js"></script>
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -163,12 +164,15 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/ico" href="https://acsp.com.br/public/upload/gallery/lp-associativismo/favicon.ico">
+    <title>Consultas em pacotes e pré-pagas Equifax | BoaVista</title>
+
 </head>
 
 <body>
     <style>
         body {
             background-color: #F7F7F7;
+            overflow-x: hidden;
         }
 
         #cookie-consent {
@@ -280,6 +284,8 @@
             background-size: cover;
             background-position: center;
             height: auto;
+            display: flex;
+
         }
 
         .inicio_novo {
@@ -354,7 +360,7 @@
         .logo {
             height: 60%;
             object-fit: contain;
-            margin-left: 150px;
+            margin-left: 100px;
         }
 
         .hamburger {
@@ -608,20 +614,22 @@
 
             </div>
             <div class="menute">
+                <a href="https://acsp.com.br/boavista-equifax#top">Consultas em pacotes</a>
 
-                <a href="#inputs">Consultar pacotes</a>
             </div>
             <div class="menute">
 
-                <a href="#desktflex">Consultas avulsas</a>
+                <a href="https://acsp.com.br/boavista-equifax#desktflex">Consultas pré-pagas</a>
             </div>
             <div class="menute">
 
-                <a href="">Consultar CPF ou CNPJ</a>
+                <a href="https://acsp.com.br/boavista-equifax#qmsomos">Quem Somos</a>
+
             </div>
             <div class="menuteduvida">
 
-                <a href="#duvida" class="duvida">Área do associado</a>
+                <a href="https://acsp.com.br/boavista-equifax#area" class="duvida">Área do
+                    associado</a>
             </div>
         </div>
     </div>
@@ -634,33 +642,106 @@
     <div class="imagem">
         <div class="d-flex flex-column col-md-6 sideform">
             <div class="" style="padding: 0px;">
-                <form action="">
+                <form action="/public/template/ads/bvs-acconsulta-pages/api/autenticate.php" method="post"
+                    id="cadastro">
+                    <input type="hidden" name="Distrital_de_Origem__c" value="99" required="" />
+                    <input type="hidden" name="ClasseDoAssociado__c" value="Participante/Usuário" required="" />
+                    <input type="hidden" name="Distrital_Preferencia__c" value="99" required="" />
+                    <input type="hidden" name="EHASSOCIADO__c" value="S" required="" />
+                    <input type="hidden" name="OrigemDaClasse__c" value="BVS" required="" />
+                    <input type="hidden" name="AccountSource" value="WebSite" required="" />
+                    <input type="hidden" name="EHCLIENTE__c" value="S" required="" />
+                    <input type="hidden" name="nocaptcha" value="1" required="" />
                     <h1 class="pt-2">Cadastre-se <strong>gratuitamente</strong> para a primeira compra</h1>
                     <div class="container">
                         <div class="row g-2 mt-2"> <!-- g-2 adiciona um gap entre as colunas -->
                             <div class="col-12 col-sm-12 col-md-6">
-                                <input class="input_form" type="text" placeholder="CNPJ">
+                                <input class="input_form" type="text" name="documento" id="documento"
+                                    placeholder="CNPJ*" required="required" maxlength="18">
                             </div>
                             <div class="col-12 col-sm-12 col-md-6">
-                                <input class="input_form" type="text" placeholder="CPF do contato">
+                                <input class="input_form" type="text" placeholder="CPF do contato*"
+                                    name="CPF_do_Contato__c" id="CPF_do_Contato__c" class="onlyNumber"
+                                    required="required" maxlength="14">
                             </div>
                             <div class="col-12 col-sm-12 col-md-6">
-                                <input class="input_form" type="text" placeholder="Razão social">
+                                <input class="input_form" type="text" placeholder="Razão social*" name="Razao_Social__c"
+                                    required="required">
                             </div>
                             <div class="col-12 col-sm-12 col-md-6">
-                                <input class="input_form" type="text" placeholder="Nome completo do contato">
+                                <input class="input_form" type="text" placeholder="Nome completo do contato*"
+                                    name="NomeDoContato__c" required="required">
                             </div>
                             <div class="col-12 col-sm-12 col-md-6">
-                                <input class="input_form" type="text" placeholder="E-mail">
+                                <input class="input_form" type="text" placeholder="E-mail*" name="Email__c"
+                                    class="inpEmail" required="required">
                             </div>
                             <div class="col-12 col-sm-12 col-md-6">
-                                <input class="input_form" type="text" placeholder="CEP">
+                                <input class="input_form mCep" type="text" placeholder="CEP*" name="ShippingPostalCode"
+                                    required="required" maxlength="10">
+                            </div>
+
+
+                            <div class="col-12 col-sm-12 col-md-6" style="display: none;">
+                                <input class="input_form" name="ShippingStreet" placeholder="Rua" maxlength="125"
+                                    required="required">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6" style="display: none;">
+                                <input class="input_form" type="text" name="ShippingNumero__c" placeholder="Número"
+                                    required="required">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6" style="display: none;">
+                                <input class="input_form" type="text" name="ShippingComplemento__c"
+                                    placeholder="Complemento">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6" style="display: none;">
+                                <input class="input_form" type="text" name="ShippingBairro__c"
+                                    placeholder="Complemento">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6" style="display: none;">
+                                <input class="input_form" type="text" name="ShippingCity" placeholder="Cidade"
+                                    required="required">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6" style="display: none;">
+                                <select class="input_form" name="ShippingState" class="inpState" required="required">
+                                    <option value="">Selecione</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                    <!-- <option value="EX">Estrangeiro</option> -->
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-md-6">
+                                <input id="telefon1" class="input_form telefone" type="text" placeholder="Celular*"
+                                    name="Celular__c" required="required" maxlength="15">
                             </div>
                             <div class="col-12 col-sm-12 col-md-6">
-                                <input class="input_form" type="text" placeholder="Celular">
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-6">
-                                <input class="input_form" type="text" placeholder="Voucher">
+                                <input class="input_form" type="text" placeholder="Voucher" name="cupom" maxlength="10">
                             </div>
                         </div>
                     </div>
@@ -668,10 +749,15 @@
                         custo adicional.
                         Você vai receber um e-mail com login e senha.</p>
                     <div class="container" style="display: flex;align-items: center;gap: 6px;">
-                        <input type="checkbox" class="form-check-input" id="COMUNICADOS" name="COMUNICADOS" value="Sim"
+                        <input type="checkbox" class="form-check-input" name="terms" value="sim" required="required"
                             required="required">
-                        <label for="" style="font-size: 9px;color:#F7F7F7;">Ao informar meus dados, eu concordo com
-                            a Política de Privacidade</label>
+                        <label class="boxTerms" style="font-size: 13px;color:#F7F7F7;">
+                            <em> Ao informar meus dados, eu concordo com a <a
+                                    href="https://acsp.com.br/publicacao/s/politica-de-privacidade"
+                                    title="Política de Privacidade" target="_blank">Política de Privacidade</a> e <a
+                                    href="https://acsp.com.br/termo-de-adesao/t/FMfcgzGsmXBHPdKnLBWxwPbfHdVsqrXs"
+                                    title="Termo de Adesão" target="_blank">Termo de Adesão</a></em>
+                        </label>
                     </div>
                     <div class="container mt-2">
                         <div class="g-recaptcha" data-sitekey="6LeWoFkeAAAAAHQp_aaprWIWCPqNVJgug7sja2Cu"></div>
@@ -682,10 +768,34 @@
                 </form>
             </div>
         </div>
-        <div class="col-md-6"></div>
-
+        <div class="col-md-6 d-flex w-100 imgdesk">
+            <div style="display: flex; justify-content: end; flex-direction: column; height: 50%;  width: 20%;">
+                <a href="https://acsp.com.br/boavista-equifax#area"
+                    style="background-color: #4A96D2; border-color:#4A96D2" class="btn btn-primary">
+                    Faça o seu login!</a>
+            </div>
+            <div
+                style="margin-left: 7%; display: flex; justify-content: end; flex-direction: column; height: 50%;  width: 20%;">
+                <a href="https://acsp.com.br/boavista-equifax-cadastre#faleConosco"
+                    style="background-color: #4A96D2; border-color:#4A96D2" class="btn btn-primary">
+                    Ainda tenho duvidas</a>
+            </div>
+        </div>
     </div>
-    <img src="http://teste.acsp.com.br/public/upload/gallery/bvseqx/motivos.png" class="imgdesk "
+    <div class="col-md-12 d-flex w-100 imgmoba d-flex center mt-3 mb-3">
+        <div style="display: flex; justify-content: end; flex-direction: column; height: 50%;  width: 50%;">
+            <a href="https://acsp.com.br/boavista-equifax#area" style="background-color: #4A96D2; border-color:#4A96D2"
+                class="btn btn-primary">
+                Faça o seu login!</a>
+        </div>
+        <div
+            style="margin-left: 7%; display: flex; justify-content: end; flex-direction: column; height: 50%;  width: 50%;">
+            <a href="https://acsp.com.br/boavista-equifax-cadastre#faleConosco"
+                style="background-color: #4A96D2; border-color:#4A96D2" class="btn btn-primary">
+                Ainda tenho duvidas</a>
+        </div>
+    </div>
+    <img src="http://teste.acsp.com.br/public/upload/gallery/bvseqx/123.png" class="imgdesk "
         style="margin-left: auto; margin-right: auto;width: 80%; object-fit: contain; margin-top: 50px; margin-bottom: 50px;" />
     <div
         style="background-color: #C9E0F2;text-align: center; justify-content: center; display: flex; align-items: center; font-size: 18px; padding: 5px 0px; font-weight: 700;">
@@ -703,7 +813,7 @@
         <div id="caroasoca" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner" style="overflow: visible; margin: 20px 0px;">
                 <div class="carousel-item active ">
-                    <img src="http://teste.acsp.com.br/public/upload/gallery/bvseqx/partici/1.png"
+                    <img src="http://teste.acsp.com.br/public/upload/gallery/bvseqx/partici/11.png"
                         style="object-fit: contain; width: 60%; margin:  0px 20%">
                 </div>
                 <div class="carousel-item ">
@@ -747,35 +857,51 @@
                     <p style="color: #002f4e; font-size: 1rem; line-height: 1.5;">Com uma análise de crédito
                         completa,<br>você pode tomar decisões com mais<br>segurança e vender mais.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" id="faleConosco">
                     <div style="background-color: #002f4e; color: white; padding: 2rem; border-radius: 0.5rem;">
                         <h2 style="font-size: 1.25rem; margin-bottom: 1.5rem;">Fale <span
                                 style="font-weight: bold;">agora</span> com um de nossos<br>especialistas e saiba mais
                         </h2>
-                        <form>
+                        <form action="https://controllerapi.acsp.com.br/sfwebtolead/save" autocomplete="off" id="myForm"
+                            method="POST" enctype="application/x-www-form-urlencoded">
+                            <input type="hidden" name="debug" value="0" required="" />
+                            <input type="hidden" name="debugEmail" value="mspereira@acsp.com.br" required="" />
+                            <input type="hidden" name="LEADSOURCE" value="Landing Page" required="" />
+                            <input type="hidden" name="AREANEGOCIO" value="BVS" required="" />
+                            <input type="hidden" name="pagina_origem" value="Consultas Pré Pagas" required="" />
+                            <input type="hidden" name="PRODUTO" value="Consultas Pré Pagas" required="" />
+                            <input type="hidden" name="00N3i00000CFIil" value="1" required="" />
+
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="name" placeholder="Nome" required
-                                    style="border-radius: 0.25rem;">
+                                <input type="text" class="form-control" id="name" name="NMCONTATO" placeholder="Nome*"
+                                    required style="border-radius: 0.25rem;">
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control" id="email" placeholder="E-mail" required
-                                    style="border-radius: 0.25rem;">
+                                <input type="text" class="form-control telefone" id="telefone2" name="TELEFONE"
+                                    placeholder="Telefone*" required="">
                             </div>
                             <div class="mb-3">
-                                <select class="form-select" id="solution" required style="border-radius: 0.25rem;">
-                                    <option value="" selected disabled>Você está buscando essa solução para:</option>
-                                    <option value="business">Meu negócio</option>
-                                    <option value="personal">Uso pessoal</option>
+                                <input type="email" class="form-control" id="email" name="EMAILCONTATO"
+                                    placeholder="E-mail*" required style="border-radius: 0.25rem;">
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select formao" aria-label="Selecione uma opção"
+                                    id="Voce_esta_buscando_essa_solucao_para__c"
+                                    name="Voce_esta_buscando_essa_solucao_para__c" required>
+                                    <option value="" disabled selected>Você está buscando essa solução para:*</option>
+                                    <option value="Pessoa Física">Pessoa Física</option>
+                                    <option value="Pessoa Jurídica">Pessoa Jurídica</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" id="message" rows="4" placeholder="Mensagem"
+                                <textarea class="form-control" id="message" name="OBS" rows="4" placeholder="Mensagem"
                                     style="border-radius: 0.25rem;"></textarea>
                             </div>
                             <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="privacy" required>
+                                <input type="checkbox" class="form-check-input" id="privacy" name="COMUNICADOS"
+                                    required>
                                 <label class="form-check-label" for="privacy" style="font-size: 0.875rem;">Ao informar
-                                    meus dados, eu concordo com a Política de Privacidade</label>
+                                    meus dados, eu concordo com a Política de Privacidade*</label>
                             </div>
                             <div class="container mt-2 mb-2">
                                 <div class="g-recaptcha" data-sitekey="6LeWoFkeAAAAAHQp_aaprWIWCPqNVJgug7sja2Cu"></div>
@@ -835,7 +961,7 @@
                                 d="M5.25 9C5.25 6.92894 6.92894 5.25 9 5.25C11.0711 5.25 12.75 6.92894 12.75 9C12.75 11.0711 11.0711 12.75 9 12.75C6.92894 12.75 5.25 11.0711 5.25 9ZM9 6.75C7.75736 6.75 6.75 7.75736 6.75 9C6.75 10.2426 7.75736 11.25 9 11.25C10.2426 11.25 11.25 10.2426 11.25 9C11.25 7.75736 10.2426 6.75 9 6.75Z"
                                 fill="#F9FAFA"></path>
                         </svg>
-                        &nbsp;Rua Boa vista, 51 - Centro<br>
+                        &nbsp;Rua Boa Vista, 51 - Centro<br>
                         01014-911 - São Paulo - SP</p>
                 </div>
             </div>
@@ -904,172 +1030,38 @@
         </div>
 
     </div>
+
     <script>
+        $(document).ready(function () {
+            $(".mCep").on("blur", function () {
+                let cep = $(this).val().replace(/\D/g, '');
 
-
-        document.getElementById('myForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const nome = document.getElementById('nome').value.trim();
-            const telefone = document.getElementById('telefone').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const comunicados = document.getElementById('politica').checked;
-            const validade = document.getElementById('Voce_esta_buscando_essa_solucao_para__c').value;
-
-            let errors = [];
-
-            if (!nome) errors.push('Campo Nome é obrigatório.');
-            if (!telefone || telefone.length < 10) errors.push('Telefone inválido.');
-            if (!email || !validateEmail(email)) errors.push('E-mail inválido.');
-            if (!comunicados) errors.push('Você deve concordar com a Política de Privacidade.');
-            if (!validade) errors.push('Você deve selecionar uma opção.');
-
-            if (errors.length > 0) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Por favor, preencha todos os campos do formulário, pois são obrigatórios.',
-                    html: errors.join('<br>')
-                });
-            } else {
-                fetch(this.action, {
-                    method: 'POST',
-                    body: new URLSearchParams(new FormData(this)).toString(),
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                        'Authorization': 'Basic cGFyY2Vpcm9zX2Fjc3A6cDRyY2UxcjBzs'
-                    }
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.status) {
-                            document.querySelectorAll('input[type=text], input[type=email], input[type=tel], textarea').forEach(input => input.value = '');
-                            document.getElementById('politica').checked = false;
-                            Swal.fire({
-                                text: 'Agradecemos pelo seu interesse! Em breve, nossa equipe de especialistas entrará em contato com você',
-                                icon: 'success',
-                                confirmButtonText: 'Fechar'
-                            }).then(() => {
-                                window.location.href = 'https://acsp.com.br/lp-associativismo-contato';
-                            });
+                if (cep.length === 8) {
+                    $.getJSON(`https://viacep.com.br/ws/${cep}/json/`, function (data) {
+                        if (!("erro" in data)) {
+                            $("input[name='ShippingStreet']").val(data.logradouro).parent().show();
+                            $("input[name='ShippingCity']").val(data.localidade).parent().show();
+                            $("select[name='ShippingState']").val(data.uf).parent().show();
+                            $("input[name='ShippingNumero__c']").parent().show();
+                            $("input[name='ShippingComplemento__c']").parent().show();
+                            $("input[name='ShippingBairro__c']").val(data.bairro).parent().show();
                         } else {
-                            Swal.fire({
-                                text: data.resposta || 'Erro ao enviar a mensagem',
-                                icon: 'error',
-                                confirmButtonText: 'Fechar'
-                            });
+                            $("input[name='ShippingStreet']").val().parent().show();
+                            $("input[name='ShippingCity']").val().parent().show();
+                            $("select[name='ShippingState']").val().parent().show();
+                            $("input[name='ShippingNumero__c']").parent().show();
+                            $("input[name='ShippingComplemento__c']").parent().show();
+                            $("input[name='ShippingBairro__c']").parent().show();
                         }
-                    })
-                    .catch(() => {
+                    }).fail(function () {
                         Swal.fire({
-                            text: 'Erro inesperado. Tente novamente mais tarde.',
                             icon: 'error',
-                            confirmButtonText: 'Fechar'
+                            title: 'Cep inválido'
                         });
                     });
-            }
-        });
-
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
-    </script>
-    <!-- <script>
-        $(document).ready(function () {
-            // Função de máscara para o campo de telefone (reutilizada nos 3 formulários)
-            let SPMaskBehavior = function (val) {
-                return val.replace(/\D/g, '').length === 11 ? '(00)00000-0000' : '(00)0000-00009';
-            };
-            let spOptions = {
-                onKeyPress: function (val, e, field, options) {
-                    field.mask(SPMaskBehavior.apply({}, arguments), options);
-                },
-                clearIfNotMatch: true
-            };
-            $("#TELEFONE").mask(SPMaskBehavior, spOptions);
-            // Função para validar campos do formulário (reutilizada nos 3 formulários)
-            function validarCampos(form) {
-                var inputs = form.find('input[required], textarea[required], select[required]');
-                for (var i = 0; i < inputs.length; i++) {
-                    if (!inputs[i].value) {
-                        return false;
-                    }
                 }
-                return true;
-            }
-    
-            // Função para resetar o formulário após envio bem-sucedido
-            function resetForm(form) {
-                form.find('input[type=text], input[type=email], input[type=tel]').not("#data").val("");
-                form.find('input[type=checkbox]').prop("checked", false);
-            }
-    
-            // Unificação da lógica de validação e envio dos formulários
-            function enviarForm(form) {
-                let url = form.attr("action");
-    
-                if (validarCampos(form)) {
-                    $.ajax({
-                        url: url,
-                        method: "POST",
-                        data: form.serialize(),
-                        beforeSend: function (xhr) {
-                            xhr.setRequestHeader('Authorization', 'Basic cGFyY2Vpcm9zX2Fjc3BfaG9tb2w6cDRyY2UxcjBzX2gwbTBs');
-                            form.find('button[name=submit]').prop("disabled", true);
-                            Swal.fire({
-                                text: 'Enviando dados. Aguarde',
-                                allowOutsideClick: false
-                            });
-                            Swal.showLoading()
-                        },
-                        success: function (data) {
-                            if (data.status) {
-                                resetForm(form);
-                                Swal.fire({
-                                    text: 'OBRIGADO POR REGISTRAR SEU INTERESSE!',
-                                    icon: 'success',
-                                    confirmButtonText: "Fechar"
-                                }).then((result) => {
-                                    // Redirect to thank-you page
-                                    window.location.href = 'https://teste.acsp.com.br/pre-visualizar-pagina/ttdmw64-stage-contato';
-                                });
-                            } else {
-                                form.find('button[name=submit]').prop("disabled", false);
-                                grecaptcha.reset();
-                                Swal.fire({
-                                    text: data.msg ? data.msg : 'Erro ao enviar a mensagem',
-                                    icon: 'error',
-                                    confirmButtonText: "Fechar"
-                                });
-                            }
-                        }
-                    });
-                } else {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Por favor, preencha todos os campos antes de enviar o formulário!',
-                    });
-                }
-            }
-    
-            // Aplicação da lógica unificada nos formulários específicos
-            $('#myForm').submit(function (event) {
-                event.preventDefault();
-                $('#TELEFONE').mask(SPMaskBehavior, spOptions);
-                enviarForm($('#myForm'));
             });
         });
-    
-        const mobileElements = document.querySelectorAll('.mobile-only');
-    
-        if (window.innerWidth <= 576) {
-            mobileElements.forEach(element => element.style.display = 'block');
-        } else {
-            mobileElements.forEach(element => element.style.display = 'none');
-        }
-    </script> -->
-    <script>
         // Valor deve conter um dos seguintes valores "Associativismo", "ACConsulta", "ACMarcas", "ACSP Legal", "Jucesp", "Declaração de Exclusividade"
         const ORGIN_PAGE = 'Associativismo'
 
@@ -1262,8 +1254,7 @@
                 emailFieldLabel: "Email",
                 emailFieldPlaceholder: "Endereço de email",
                 emailFormButton: "Enviar",
-                emailLinkingErrorMessage:
-                    "Por favor, entre com um endereço de email válido.",
+                emailLinkingErrorMessage: "Por favor, entre com um endereço de email válido.",
                 fetchHistory: "Carregar mais",
                 fetchingHistory: "Carregando histórico",
                 fileTooLargeError: "Tamanho máximo do arquivo atingido: {size}",
@@ -1478,16 +1469,16 @@
         document.getElementById('myForm').addEventListener('submit', function (event) {
             event.preventDefault();
 
-            const nome = document.getElementById('nome').value.trim();
-            const telefone = document.getElementById('telefone').value.trim();
+            const nome = document.getElementById('name').value.trim();  // Corrigido
+            const telefone = document.getElementById('telefone').value.trim();  // Corrigido
             const email = document.getElementById('email').value.trim();
-            const comunicados = document.getElementById('politica').checked;
+            const comunicados = document.getElementById('privacy').checked;  // Corrigido
             const validade = document.getElementById('Voce_esta_buscando_essa_solucao_para__c').value;
 
             let errors = [];
 
             if (!nome) errors.push('Campo Nome é obrigatório.');
-            if (!telefone || telefone.length < 10) errors.push('Telefone inválido.');
+            if (!telefone || telefone.length < 15) errors.push('Telefone inválido.');
             if (!email || !validateEmail(email)) errors.push('E-mail inválido.');
             if (!comunicados) errors.push('Você deve concordar com a Política de Privacidade.');
             if (!validade) errors.push('Você deve selecionar uma opção.');
@@ -1504,20 +1495,20 @@
                     body: new URLSearchParams(new FormData(this)).toString(),
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
-                        'Authorization': 'Basic cGFyY2Vpcm9zX2Fjc3BfaG9tb2w6cDRyY2UxcjBzX2gwbTBs'
+                        'Authorization': 'Basic cGFyY2Vpcm9zX2Fjc3A6cDRyY2UxcjBzs'
                     }
                 })
                     .then(response => response.json())
                     .then(data => {
                         if (data.status) {
                             document.querySelectorAll('input[type=text], input[type=email], input[type=tel], textarea').forEach(input => input.value = '');
-                            document.getElementById('politica').checked = false;
+                            document.getElementById('privacy').checked = false;
                             Swal.fire({
                                 text: 'Agradecemos pelo seu interesse! Em breve, nossa equipe de especialistas entrará em contato com você',
                                 icon: 'success',
                                 confirmButtonText: 'Fechar'
                             }).then(() => {
-                                window.location.href = 'https://acsp.com.br/lp-agradecimento-clube';
+                                window.location.href = 'https://acsp.com.br/boavista-equifax-agradecimento';
                             });
                         } else {
                             Swal.fire({
@@ -1550,7 +1541,103 @@
                 }
             }
         };
+        if (window.location.hash) {
+            var hash = window.location.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 1000);
+        }
+        document.getElementById("cadastro").addEventListener("submit", function (event) {
+            event.preventDefault();
 
+            const documento = document.getElementById("documento").value.trim();
+            const cpfContato = document.getElementById("CPF_do_Contato__c").value.trim();
+            const razaoSocial = document.getElementsByName("Razao_Social__c")[0].value.trim();
+            const nomeContato = document.getElementsByName("NomeDoContato__c")[0].value.trim();
+            const email = document.getElementsByName("Email__c")[0].value.trim();
+            const cep = document.getElementsByName("ShippingPostalCode")[0].value.trim();
+            const celular = document.getElementsByName("Celular__c")[0].value.trim();
+            const politica = document.getElementsByName("terms")[0].checked;
+
+            let errors = [];
+
+            if (!documento) errors.push("Campo CNPJ é obrigatório.");
+            if (!cpfContato) errors.push("Campo CPF do contato é obrigatório.");
+            if (!razaoSocial) errors.push("Campo Razão Social é obrigatório.");
+            if (!nomeContato) errors.push("Campo Nome completo do contato é obrigatório.");
+            if (!email || !validateEmail(email)) errors.push("E-mail inválido.");
+            if (!cep) errors.push("Campo CEP é obrigatório.");
+            if (!celular || celular.length < 15) errors.push("Campo Celular inválido.");
+            if (!politica) errors.push("Você deve concordar com a Política de Privacidade.");
+
+            if (errors.length > 0) {
+                alert(errors.join("\n"));
+            } else {
+                fetch(this.action, {
+                    method: 'POST',
+                    body: new URLSearchParams(new FormData(this)).toString(),
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'Authorization': 'Basic cGFyY2Vpcm9zX2Fjc3A6cDRyY2UxcjBzs'
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data); // Debug
+                        if (data.status) {
+                            document.querySelectorAll('input[type=text], input[type=email], input[type=tel], textarea').forEach(input => input.value = '');
+                            document.getElementById('politica').checked = false;
+                            Swal.fire({
+                                text: 'Agradecemos pelo seu interesse! Em breve, nossa equipe de especialistas entrará em contato com você',
+                                icon: 'success',
+                                confirmButtonText: 'Fechar'
+                            }).then(() => {
+                                window.location.href = 'https://acsp.com.br/boavista-equifax-agradecimento';
+                            });
+                        } else {
+                            Swal.fire({
+                                text: data.resposta || 'Erro ao enviar a mensagem',
+                                icon: 'error',
+                                confirmButtonText: 'Fechar'
+                            });
+                        }
+                    })
+                    .catch(() => {
+                        Swal.fire({
+                            text: 'Erro inesperado. Tente novamente mais tarde.',
+                            icon: 'error',
+                            confirmButtonText: 'Fechar'
+                        });
+                    });
+            }
+        });
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+        $('.logo').click(() => {
+            window.location.href = "https://acsp.com.br/"
+        })
+        $('.telefone').on('input', function () {
+            var input = $(this).val();
+            // Remove qualquer caractere que não seja número
+            input = input.replace(/\D/g, '');
+
+            // Formata o número para o formato (xx) xxxxx-xxxx
+            if (input.length > 10) {
+                input = input.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+            } else if (input.length > 6) {
+                input = input.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+            } else if (input.length > 2) {
+                input = input.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+            } else {
+                input = input.replace(/^(\d*)/, '($1');
+            }
+
+            // Atualiza o valor do campo de entrada
+            $(this).val(input);
+        });
     </script>
 </body>
 

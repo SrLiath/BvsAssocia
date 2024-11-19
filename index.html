@@ -8,7 +8,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -35,7 +34,6 @@
     <!-- scripts -->
     <script src="https://acsp.com.br/public/template/ads/bvs-acconsulta-pages/js/functions.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PBH38WGJ5"></script>
-
     <script>
 
         window.dataLayer = window.dataLayer || [];
@@ -99,6 +97,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/ico" href="https://acsp.com.br/public/upload/gallery/lp-associativismo/favicon.ico">
+    <title>Consultas em pacotes e pré-pagas Equifax | BoaVista</title>
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -192,7 +191,7 @@
         }
 
         red {
-            color: #A81C1B;
+            color: #9E1C33;
             font-weight: 600;
         }
 
@@ -376,6 +375,8 @@
             align-items: center;
             display: flex;
             margin-bottom: 10px;
+            margin-right: 5px;
+            margin-left: 5px;
             font-size: 12px;
             font-weight: 600;
         }
@@ -517,7 +518,7 @@
             border: 1px solid #CCCCCC;
             position: relative;
             flex-direction: column;
-            height: 270px;
+            height: auto;
             width: 230px;
             border-radius: 25px;
             color: #002D44;
@@ -594,11 +595,7 @@
                 margin-bottom: 20px;
             }
         }
-    </style>
-</head>
 
-<body>
-    <style>
         #cookie-consent {
             position: fixed;
             bottom: 0;
@@ -660,6 +657,9 @@
             }
         }
     </style>
+</head>
+
+<body>
     <div id="cookie-consent" role="alert">
         <p style="display: flex;margin-top: 10px;font-size: 13px;color: #4A96D2;">Controle sua privacidade</p>
         <p style="font-size: 14px;text-align: justify;">Este site usa cookies para melhorar sua experiência de
@@ -677,6 +677,10 @@
     </div>
 
     <script>
+        $('.logo').click(() => {
+            window.location.href = "https://acsp.com.br/"
+        })
+
         function showCookieConsent() {
             document.getElementById('cookie-consent').style.display = 'block'; // Exibe a notificação
         }
@@ -723,7 +727,7 @@
         .logo {
             height: 60%;
             object-fit: contain;
-            margin-left: 150px;
+            margin-left: 100px;
         }
 
         .hamburger {
@@ -757,6 +761,14 @@
             padding: 7px 10px;
         }
 
+        #openModalBtn {
+            cursor: pointer;
+        }
+
+        #openModalBtn:hover {
+            color: #002D61 !important;
+        }
+
         .menu {
             display: flex;
             justify-content: space-around;
@@ -779,7 +791,7 @@
 
 
         .textodolado {
-            margin: 100px;
+            margin: 0px 0px 0px 100px;
             max-width: 35%;
             justify-content: center;
             display: flex;
@@ -1054,19 +1066,20 @@
             </div>
             <div class="menute">
 
-                <a href="#inputs">Consultar pacotes</a>
+                <a href="https://acsp.com.br/boavista-equifax#top">Consultas em pacotes</a>
             </div>
             <div class="menute">
 
-                <a href="#desktflex">Consultas avulsas</a>
+                <a href="https://acsp.com.br/boavista-equifax#desktflex">Consultas pré-pagas</a>
             </div>
             <div class="menute">
 
-                <a href="">Consultar CPF ou CNPJ</a>
+                <a href="https://acsp.com.br/boavista-equifax#qmsomos">Quem Somos</a>
             </div>
             <div class="menuteduvida">
 
-                <a href="#duvida" class="duvida">Área do associado</a>
+                <a href="https://acsp.com.br/boavista-equifax#area" class="duvida">Área do
+                    associado</a>
             </div>
         </div>
     </div>
@@ -1076,7 +1089,7 @@
             document.querySelector('.menu').classList.toggle('show');
         }
     </script>
-    <div class="d-flex justify-content-center align-items-center image" style="width: 100vw">
+    <div class="d-flex justify-content-center align-items-center image" style="width: 100vw" id="top">
         <div class="form imgdesk">
             <div class="formulario">
                 <div class="inputs">
@@ -1085,36 +1098,36 @@
                         um dos nossos <strong>especialistas:</strong>
                     </h3>
                     <div class="form-container inputpc">
-                        <form action="https://t2controllerapi.acsp.com.br/sfwebtolead/save" autocomplete="off"
-                            id="myForm" method="POST" enctype="application/x-www-form-urlencoded">
+                        <form action="https://controllerapi.acsp.com.br/sfwebtolead/save" autocomplete="off" id="myForm"
+                            method="POST" enctype="application/x-www-form-urlencoded">
                             <input type="hidden" name="debug" value="0" required="" />
                             <input type="hidden" name="debugEmail" value="mspereira@acsp.com.br" required="" />
                             <input type="hidden" name="LEADSOURCE" value="Landing Page" required="" />
-                            <input type="hidden" name="AREANEGOCIO" value="Associativismo" required="" />
-                            <input type="hidden" name="pagina_origem" value="http://associativismo.acsp.com.br/"
-                                required="" />
-                            <input type="hidden" name="PRODUTO" value="associativismo" required="" />
+                            <input type="hidden" name="AREANEGOCIO" value="BVS" required="" />
+                            <input type="hidden" name="pagina_origem" value="Consultas EBV" required="" />
+                            <input type="hidden" name="PRODUTO" value="Consultas EBV" required="" />
                             <input type="hidden" name="00N3i00000CFIil" value="1" required="" />
 
-                            <div class="d-flex align-items-center justify-content-center mb-3 ">
+                            <div class="d-flex align-items-center justify-content-center mb-3 "
+                                style="margin-left: 4px;margin-right: 4px;">
                                 <div class="col-md-6 marin">
-                                    <input type="text" class="form-control nome" name="NMCONTATO"
-                                        placeholder="Nome completo" required>
+                                    <input type="text" class="form-control nome" name="NMCONTATO" placeholder="Nome*"
+                                        required>
                                 </div>
                                 <div class="col-md-6 ms-2">
                                     <input type="text" class="form-control telefone" name="TELEFONE"
-                                        placeholder="Telefone" required>
+                                        placeholder="Telefone*" required>
                                 </div>
                             </div>
 
                             <div class="mb-3">
                                 <input type="email" class="form-control emailcontato" name="EMAILCONTATO"
-                                    placeholder="E-mail" required>
+                                    placeholder="E-mail*" required>
                             </div>
 
 
                             <div class="mb-3">
-                                <div class="topInput"> <label class="form-label lab">Você está buscando
+                                <div class="topInput"> <label class="form-label lab">*Você está buscando
                                         essa solução para:</label></div>
                                 <select class="form-select formao" aria-label="Selecione uma opção"
                                     id="Voce_esta_buscando_essa_solucao_para__c"
@@ -1132,8 +1145,15 @@
                                     dados, eu
                                     concordo com a Política de Privacidade</label>
                             </div>
-                            <div class="center">
-                                <div class="g-recaptcha" data-sitekey="6LeWoFkeAAAAAHQp_aaprWIWCPqNVJgug7sja2Cu"></div>
+                            <div class="d-flex flex-column ">
+
+                                <div class="w-100">
+                                    <small style="float:left">*Campos obrigatórios<br></small>
+                                </div>
+                                <div class="center">
+                                    <div class="g-recaptcha" data-sitekey="6LeWoFkeAAAAAHQp_aaprWIWCPqNVJgug7sja2Cu">
+                                    </div>
+                                </div>
                             </div>
 
                             <div style="display: flex; justify-content: center;">
@@ -1157,7 +1177,14 @@
                     </b>
                 </h2>
                 <h4><b>Pacotes personalizados<br>
-                        para o seu negócio:</b></h4>
+                        para o seu negócio</b></h4>
+                <div style="display: flex; justify-content: end; flex-direction: column; height: 35%;">
+                    <h4 style="text-align: center; width: 100%;">Conheça também nossas</h4>
+                    <a href="https://acsp.com.br/boavista-equifax#area"
+                        style="background-color: #4A96D2; border-color:#4A96D2" class="btn btn-primary">
+                        Consultas
+                        pré-pagas</a>
+                </div>
 
 
             </div>
@@ -1221,9 +1248,13 @@
                 }
 
                 .fale {
-                    width: 50%;
+                    width: 60%;
                     height: 40px;
                     border-radius: 15px;
+                }
+
+                #carouselPrec {
+                    width: 100vw
                 }
             </style>
             <div class="banner">
@@ -1242,15 +1273,14 @@
                         um dos nossos <strong>especialistas:</strong>
                     </h3>
                     <div class="form-container inputmoba">
-                        <form action="https://t2controllerapi.acsp.com.br/sfwebtolead/save" autocomplete="off"
-                            id="myForm" method="POST" enctype="application/x-www-form-urlencoded">
+                        <form action="https://controllerapi.acsp.com.br/sfwebtolead/save" autocomplete="off" id="myForm"
+                            method="POST" enctype="application/x-www-form-urlencoded">
                             <input type="hidden" name="debug" value="0" required="" />
                             <input type="hidden" name="debugEmail" value="mspereira@acsp.com.br" required="" />
                             <input type="hidden" name="LEADSOURCE" value="Landing Page" required="" />
-                            <input type="hidden" name="AREANEGOCIO" value="Associativismo" required="" />
-                            <input type="hidden" name="pagina_origem" value="http://associativismo.acsp.com.br/"
-                                required="" />
-                            <input type="hidden" name="PRODUTO" value="associativismo" required="" />
+                            <input type="hidden" name="AREANEGOCIO" value="BVS" required="" />
+                            <input type="hidden" name="pagina_origem" value="Consultas EBV" required="" />
+                            <input type="hidden" name="PRODUTO" value="BVS" required="" />
                             <input type="hidden" name="00N3i00000CFIil" value="1" required="" />
 
                             <div class="row mb-3">
@@ -1354,22 +1384,18 @@
                 <li class="benefits-item"> <b>&check;</b> Pagamento em até 30 dias após a contratação</li>
             </ul>
         </section>
-
-        <img class="img" src="http://teste.acsp.com.br/public/upload/gallery/bvseqx/topNew.png">
+        <div class="center">
+            <h2 style="text-align: center; font-weight: 700; margin-top: 2rem; ">
+                Pacotes para empresas de todos os tamanhos
+            </h2>
+        </div>
+        <img class="img" src="http://teste.acsp.com.br/public/upload/gallery/bvseqx/topNew2.png">
         <div class="imgdesk"
             style="background-color: #EFF0F0; height: 34px;  width: 100vw; display: flex; align-items: center; justify-content: center; text-align: center;">
             Com informações precisas, você <b>&nbsp;otimiza suas vendas&nbsp;</b> e <b>&nbsp;ganha tempo&nbsp;</b> para
             investir em outras
             estratégias.
         </div>
-    </div>
-    <div class="center d-flex justify-content-center align-items-center ">
-
-        <a href=""
-            style="background-color: #FEC553; border-radius: 30px; height: 40px; text-align: center; padding: 1px 50px; color:#002D44; font-weight: 600;"
-            class="d-flex justify-content-center align-items-center mt-4 mb-4">Solicite
-            contato</a>
-
     </div>
     <style>
         .naimon .container {
@@ -1380,7 +1406,7 @@
 
         .naimon .headera {
             text-align: center;
-            margin-bottom: 90px;
+            margin-bottom: 70px;
         }
 
         .naimon h1 {
@@ -1434,7 +1460,7 @@
         }
 
         .naimon .intro p {
-            font-size: 15px;
+            font-size: 20px;
         }
 
         .naimon .steps {
@@ -1505,8 +1531,7 @@
                             <div class="step-content">
                                 <h3>Escolha o tipo de consulta</h3>
                                 <p>
-                                    Você pode contratar consultas pré-pagas<br>
-                                    ou em pacotes exclusivos
+                                    Você pode consultar CNPJ ou CPF
                                 </p>
                             </div>
                         </div>
@@ -1537,7 +1562,7 @@
         </section>
 </body>
 </div>
-<div class="position-relative d-flex imgdesk w-100 " style="margin: 0px;">
+<div class="position-relative d-flex imgdesk w-100 mb-3" style="margin: 0px;">
     <div class="ladogif">
         <h5 class="w-60 ms-md-5 fw-bold">
             <red>Consulte o score do seu cliente</red> e ofereça as melhores condições de crédito com<br> mais
@@ -1551,12 +1576,13 @@
             dados atualizados e
             confiáveis de novos parceiros<br><strong>&check;</strong> Garanta mais economia para o seu negócio</p>
         <div class="d-flex justify-content-between w-60 m-md-5 mt-md-0">
-            <a href="">Quero contratar</a>
-            <a href="">
+            <a href="#top">Quero contratar</a>
+            <a
+                href="https://api.whatsapp.com/send/?phone=551131803737&amp;text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BoaVista%20Equifax%20e%20gostaria%20de%20conversar%20com%20voc%C3%AAs">
                 <svg width=" 21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M17.55 3.41005C16.6331 2.48416 15.5411 1.75002 14.3376 1.25042C13.134 0.750812 11.8431 0.495737 10.54 0.500054C5.08005 0.500054 0.630049 4.95005 0.630049 10.4101C0.630049 12.1601 1.09005 13.8601 1.95005 15.3601L0.550049 20.5001L5.80005 19.1201C7.25005 19.9101 8.88005 20.3301 10.54 20.3301C16 20.3301 20.4501 15.8801 20.4501 10.4201C20.4501 7.77005 19.42 5.28005 17.55 3.41005ZM10.54 18.6501C9.06005 18.6501 7.61005 18.2501 6.34005 17.5001L6.04005 17.3201L2.92005 18.1401L3.75005 15.1001L3.55005 14.7901C2.7276 13.4771 2.29097 11.9593 2.29005 10.4101C2.29005 5.87005 5.99005 2.17005 10.53 2.17005C12.73 2.17005 14.8 3.03005 16.35 4.59005C17.1177 5.35392 17.726 6.2626 18.1397 7.26338C18.5534 8.26417 18.7642 9.33714 18.76 10.4201C18.7801 14.9601 15.08 18.6501 10.54 18.6501ZM15.06 12.4901C14.81 12.3701 13.59 11.7701 13.37 11.6801C13.14 11.6001 12.98 11.5601 12.81 11.8001C12.64 12.0501 12.17 12.6101 12.03 12.7701C11.89 12.9401 11.74 12.9601 11.49 12.8301C11.24 12.7101 10.44 12.4401 9.50005 11.6001C8.76005 10.9401 8.27005 10.1301 8.12005 9.88005C7.98005 9.63005 8.10005 9.50005 8.23005 9.37005C8.34005 9.26005 8.48005 9.08005 8.60005 8.94005C8.72005 8.80005 8.77005 8.69005 8.85005 8.53005C8.93005 8.36005 8.89005 8.22005 8.83005 8.10005C8.77005 7.98005 8.27005 6.76005 8.07005 6.26005C7.87005 5.78005 7.66005 5.84005 7.51005 5.83005H7.03005C6.86005 5.83005 6.60005 5.89005 6.37005 6.14005C6.15005 6.39005 5.51005 6.99005 5.51005 8.21005C5.51005 9.43005 6.40005 10.6101 6.52005 10.7701C6.64005 10.9401 8.27005 13.4401 10.75 14.5101C11.34 14.7701 11.8 14.9201 12.16 15.0301C12.75 15.2201 13.29 15.1901 13.72 15.1301C14.2 15.0601 15.19 14.5301 15.39 13.9501C15.6 13.3701 15.6 12.8801 15.53 12.7701C15.46 12.6601 15.31 12.6101 15.06 12.4901Z"
-                        fill="white" />
+                        fill="white"></path>
                 </svg>
 
                 Falar com um especialista
@@ -1564,13 +1590,493 @@
         </div>
 
     </div>
-    <div class="d-flex justify-content-center bottom-0" style="width: 100%">
+    <div class="d-flex justify-content-center align-items-center bottom-0" style="width: 100%">
         <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/motion2.gif" style="height: '100%'; object-fit: contain; position: absolute;  margin-right: 10px;
-                bottom: 0px" alt="">
+               " alt="">
 
     </div>
 </div>
+<div class="imgmoba" style="background-color: #FAFAFA; height: 500px; width: 100vw; flex-direction: column;">
+    <strong>
+        <red>
+            <h1 style="text-align: center;margin-top: 20px;; font-weight: 800 !important;">
+                Associação Comercial<br>
+                de São Paulo e Equifax | BoaVista Inteligência de dados para empresas<br>
+            </h1>
+        </red>
+    </strong>
+    <h1 style="text-align: center; padding: 10px 50px">
+        Conheça as vantagens
+        de utilizar nosso serviço
+        de análise de crédito.
+    </h1>
+    <div id="caroasoca" class="carousel slide imgmoba" data-bs-ride="carousel">
+        <div class="carousel-inner" style="overflow: visible;">
+            <div class="carousel-item active ">
+                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/1.png"
+                    style="object-fit: contain; width: 60%; margin:  0px 20%">
+            </div>
+            <div class="carousel-item ">
+                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/2.png"
+                    style="object-fit: contain; width: 60%; margin:  0px 20%">
+            </div>
+            <div class="carousel-item ">
+                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/3.png"
+                    style="object-fit: contain; width: 60%; margin:  0px 20%">
+            </div>
+            <div class="carousel-item ">
+                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/4.png"
+                    style="object-fit: contain; width: 60%; margin:  0px 20%">
+            </div>
+            <div class="carousel-item ">
+                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/5.png"
+                    style="object-fit: contain; width: 60%; margin:  0px 20%">
+            </div>
+            <div class="carousel-item ">
+                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/6.png"
+                    style="object-fit: contain; width: 60%; margin:  0px 20%">
+            </div>
 
+
+            <div class="carousel-indicators" style="margin-bottom: -1rem;">
+                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="4" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="5" aria-label="Slide 3"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex flex-column">
+    <div class="center mt-md-4 imgdesk d-flex flex-column" style="text-align: center;">
+        <h1 class="main-title">Pacotes acessíveis para empresas<br>de todos os portes e diversos segmentos</h1>
+        <p class="subtitle">O serviço <span class="bold">Equifax | BoaVista</span> da <span class="bold">Associação
+                Comercial de São Paulo</span>, atende às necessidades específicas de cada empresa, desde pequenos
+            negócios até grandes corporações.</p>
+        <h2 class="section-title">Conheça nossos pacotes:</h2>
+        <div class="underline"></div>
+
+    </div>
+    <div id="carouselPrec" class="carousel slide imgmoba center" data-bs-ride="carousel">
+        <div class="carousel-inner" style="width: 60%!important;">
+            <div class="carousel-indicators" style="z-index: 5;">
+                <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="4" aria-label="Slide 3"></button>
+            </div>
+            <!-- Item 1 -->
+            <div class="carousel-item active">
+                <div class="conteudo-inicial p-2 containerPreco center w-100">
+                    <p><strong>R$<preco>60</preco><br>em créditos</strong></p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                    <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                    <a class="fundo">Ideal para pequenos negócios</a>
+                </div>
+
+                <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                    style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                            realizar:</strong></p>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 1 Consulta com Recomendação CPF ou CNPJ</span>
+                        <span style="display: block;"><b>&check;</b> ou 1 Consulta Completa</span>
+                        <span style="display: block;"><b>&check;</b> ou 2 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 7 Consultas de</span>
+                        <span style="display: block;">Confirmação Cadastral</span>
+                    </p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="carousel-item">
+                <div class="conteudo-inicial p-2 containerPreco center w-100">
+                    <p><strong>R$<preco>130</preco><br>em créditos</strong></p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                    <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                    <a class="fundo">Ideal para negócios em crescimento</a>
+                </div>
+
+                <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                    style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                            realizar:</strong></p>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 2 Consultas com Recomendação CPF ou CNPJ</span>
+                        <span style="display: block;"><b>&check;</b> ou 3 Consultas Completas</span>
+                        <span style="display: block;"><b>&check;</b> ou 5 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 18 Consultas de Confirmação Cadastral</span>
+                    </p>
+
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="carousel-item">
+                <div class="conteudo-inicial p-2 containerPreco center w-100">
+                    <p><strong>R$<preco>250</preco><br>em créditos</strong></p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                    <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                    <a class="fundo">Ideal para negócios estabelecidos</a>
+                </div>
+
+                <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                    style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                            realizar:</strong></p>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 5 Consultas com</span>
+                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                        <span style="display: block;"><b>&check;</b> ou 5 Consultas Completas</span>
+                        <span style="display: block;"><b>&check;</b> ou 9 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 7 Consultas de</span>
+                        <span style="display: block;">Confirmação Cadastral</span>
+                    </p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="carousel-item">
+                <div class="conteudo-inicial p-2 containerPreco center w-100">
+                    <p><strong>R$<preco>130</preco><br>em créditos</strong></p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                    <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                    <a class="fundo">Ideal para negócios em crescimento</a>
+                </div>
+
+                <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                    style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                            realizar:</strong></p>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 2 Consultas com Recomendação CPF ou CNPJ</span>
+                        <span style="display: block;"><b>&check;</b> ou 3 Consultas Completas</span>
+                        <span style="display: block;"><b>&check;</b> ou 5 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 18 Consultas de Confirmação Cadastral</span>
+                    </p>
+
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="carousel-item">
+                <div class="conteudo-inicial p-2 containerPreco center w-100">
+                    <p><strong>R$<preco>250</preco><br>em créditos</strong></p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                    <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                    <a class="fundo">Ideal para negócios estabelecidos</a>
+                </div>
+
+                <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                    style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                            realizar:</strong></p>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 5 Consultas com</span>
+                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                        <span style="display: block;"><b>&check;</b> ou 5 Consultas Completas</span>
+                        <span style="display: block;"><b>&check;</b> ou 9 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 32 Consultas de</span>
+                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                    </p>
+
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="carousel-item">
+                <div class="conteudo-inicial p-2 containerPreco center w-100 position-relative">
+                    <p><strong>R$<preco>500</preco><br>em créditos</strong></p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                    <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                    <a class="fundo">Ideal para empresas em expansão</a>
+                </div>
+
+                <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                    style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 7 Consultas com</span>
+                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                        <span style="display: block;"><b>&check;</b> ou 6 Consultas com</span>
+                        <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
+                        <span style="display: block;"><b>&check;</b> ou 8 Consultas Completas</span>
+                        <span style="display: block;"><b>&check;</b> ou 13 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 48 Consultas de</span>
+                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                    </p>
+
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="carousel-item">
+                <div class="conteudo-inicial p-2 containerPreco center w-100">
+                    <p><strong>R$<preco>750</preco><br>em créditos</strong></p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                    <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                    <a class="fundo">Ideal para grandes negócios</a>
+                </div>
+
+                <div class="conteudo-detalhado p-2 containerPreco center w-100"
+                    style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 14 Consultas com</span>
+                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                        <span style="display: block;"><b>&check;</b> ou 13 Consultas com</span>
+                        <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
+                        <span style="display: block;"><b>&check;</b> ou 16 Consultas Completas</span>
+                        <span style="display: block;"><b>&check;</b> ou 27 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 95 Consultas de</span>
+                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                    </p>
+
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid d-flex justify-content-center mt-md-5 mb-md-5 imgdesk">
+        <div class="row justify-content-center gx-2" style="max-width: 100vw;">
+            <!-- Item 1 -->
+            <div class="col-auto">
+                <div class="conteudo-inicial p-2 containerPreco center">
+                    <p><strong>R$<preco>60</preco><br>em créditos</strong></p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                    <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                    <a class="fundo">Ideal para pequenos negócios</a>
+                </div>
+                <div class="conteudo-detalhado p-2 containerPreco center" style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                            realizar:</strong></p>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 1 Consulta com Recomendação CPF ou CNPJ</span>
+                        <span style="display: block;"><b>&check;</b> ou 1 Consulta Completa</span>
+                        <span style="display: block;"><b>&check;</b> ou 2 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 7 Consultas de</span>
+                        <span style="display: block;">Confirmação Cadastral</span>
+                    </p>
+
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="col-auto">
+                <div class="conteudo-inicial p-2 containerPreco center">
+                    <p><strong>R$<preco>130</preco><br>em créditos</strong></p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                    <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                    <a class="fundo">Ideal para negócios em crescimento</a>
+                </div>
+                <div class="conteudo-detalhado p-2 containerPreco center" style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                            realizar:</strong></p>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 2 Consultas com Recomendação CPF ou CNPJ</span>
+                        <span style="display: block;"><b>&check;</b> ou 3 Consultas Completas</span>
+                        <span style="display: block;"><b>&check;</b> ou 5 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 18 Consultas de Confirmação Cadastral</span>
+                    </p>
+
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-auto">
+                <div class="conteudo-inicial p-2 containerPreco center">
+                    <p><strong>R$<preco>250</preco><br>em créditos</strong></p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                    <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                    <a class="fundo">Ideal para negócios em expansão</a>
+                </div>
+                <div class="conteudo-detalhado p-2 containerPreco center" style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                            realizar:</strong></p>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 5 Consultas com</span>
+                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                        <span style="display: block;"><b>&check;</b> ou 5 Consultas Completas</span>
+                        <span style="display: block;"><b>&check;</b> ou 9 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 32 Consultas de</span>
+                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                    </p>
+
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="col-auto">
+                <div class="conteudo-inicial center position-relative">
+
+                    <svg width="111" height="23" style="position: absolute; top: -10px; z-index: 999;"
+                        viewBox="0 0 111 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.600098 5.93342C0.600098 2.98791 2.98791 0.600098 5.93343 0.600098H111V17.6668C111 20.6123 108.612 23.0001 105.667 23.0001H0.600098V5.93342Z"
+                            fill="#4BC9D1"></path>
+                        <path
+                            d="M11.1693 16.7334L8.87406 9.25446H8.81538C8.82407 9.43269 8.83712 9.7022 8.8545 10.063C8.87624 10.4194 8.8958 10.7998 8.91319 11.2041C8.93058 11.6083 8.93927 11.9735 8.93927 12.2995V16.7334H7.13311V7.20053H9.88473L12.1408 14.4904H12.1799L14.5729 7.20053H17.3245V16.7334H15.4401V12.2213C15.4401 11.9213 15.4445 11.5757 15.4532 11.1845C15.4662 10.7933 15.4814 10.4216 15.4988 10.0695C15.5162 9.71307 15.5293 9.44573 15.5379 9.2675H15.4793L13.0211 16.7334H11.1693ZM25.5664 16.7334L24.8752 14.4643H21.3998L20.7086 16.7334H18.5308L21.8954 7.1614H24.3666L27.7442 16.7334H25.5664ZM24.3927 12.769L23.7015 10.552C23.6581 10.4042 23.5994 10.2151 23.5255 9.98475C23.4559 9.75002 23.3842 9.51311 23.3103 9.27402C23.2408 9.03059 23.1842 8.81977 23.1408 8.64154C23.0973 8.81977 23.0364 9.04146 22.9582 9.30663C22.8843 9.56744 22.8126 9.81522 22.743 10.05C22.6735 10.2847 22.6235 10.452 22.5931 10.552L21.9084 12.769H24.3927ZM28.9505 16.7334V7.20053H30.9718V16.7334H28.9505ZM38.9985 14.0861C38.9985 14.6512 38.8615 15.1424 38.5877 15.5597C38.3138 15.977 37.9139 16.2987 37.3879 16.5247C36.8663 16.7508 36.2316 16.8638 35.4839 16.8638C35.1536 16.8638 34.8297 16.8421 34.5124 16.7986C34.1994 16.7551 33.8973 16.6921 33.6061 16.6095C33.3192 16.5226 33.0453 16.4161 32.7845 16.29V14.4121C33.2366 14.6121 33.706 14.7925 34.1929 14.9533C34.6798 15.1142 35.1623 15.1946 35.6404 15.1946C35.9708 15.1946 36.236 15.1511 36.4359 15.0642C36.6402 14.9772 36.788 14.8577 36.8793 14.7055C36.9706 14.5534 37.0163 14.3795 37.0163 14.1839C37.0163 13.9448 36.9358 13.7405 36.775 13.571C36.6142 13.4015 36.3925 13.2428 36.1099 13.095C35.8317 12.9472 35.5166 12.7885 35.1644 12.619C34.9428 12.5147 34.7015 12.3886 34.4407 12.2408C34.1799 12.0887 33.9321 11.9039 33.6974 11.6866C33.4626 11.4692 33.2692 11.2062 33.117 10.8976C32.9692 10.5846 32.8953 10.2108 32.8953 9.7761C32.8953 9.20665 33.0257 8.71979 33.2866 8.31552C33.5474 7.91125 33.919 7.60262 34.4016 7.38962C34.8884 7.17227 35.4622 7.0636 36.123 7.0636C36.6185 7.0636 37.0901 7.12228 37.5379 7.23965C37.99 7.35267 38.4616 7.51785 38.9528 7.7352L38.3008 9.30663C37.8617 9.1284 37.4683 8.99147 37.1206 8.89584C36.7728 8.79586 36.4185 8.74587 36.0577 8.74587C35.8056 8.74587 35.5904 8.78716 35.4122 8.86976C35.234 8.948 35.0992 9.06102 35.008 9.20882C34.9167 9.35227 34.871 9.51963 34.871 9.71089C34.871 9.93693 34.9362 10.1282 35.0666 10.2847C35.2014 10.4368 35.4014 10.5846 35.6665 10.7281C35.936 10.8715 36.2707 11.0389 36.6707 11.2302C37.1575 11.4605 37.5727 11.7018 37.9161 11.9539C38.2638 12.2017 38.5312 12.4951 38.7181 12.8342C38.905 13.1689 38.9985 13.5862 38.9985 14.0861ZM47.2403 7.20053C48.4705 7.20053 49.3681 7.46569 49.9332 7.99602C50.4983 8.522 50.7809 9.24794 50.7809 10.1738C50.7809 10.5912 50.7179 10.9911 50.5918 11.3736C50.4657 11.7518 50.2592 12.0887 49.9723 12.3843C49.6898 12.6799 49.3116 12.9146 48.8378 13.0885C48.364 13.258 47.7793 13.3428 47.0838 13.3428H46.2166V16.7334H44.1952V7.20053H47.2403ZM47.136 8.85672H46.2166V11.6866H46.8817C47.2599 11.6866 47.588 11.6366 47.8663 11.5366C48.1445 11.4366 48.3596 11.2801 48.5118 11.0671C48.6639 10.8541 48.74 10.5803 48.74 10.2456C48.74 9.7761 48.6096 9.42834 48.3488 9.2023C48.0879 8.97191 47.6837 8.85672 47.136 8.85672ZM61.2331 11.9539C61.2331 12.6886 61.1419 13.358 60.9593 13.9622C60.7767 14.5621 60.4985 15.0794 60.1247 15.5141C59.7552 15.9488 59.2857 16.2835 58.7163 16.5182C58.1468 16.7486 57.473 16.8638 56.6949 16.8638C55.9168 16.8638 55.243 16.7486 54.6736 16.5182C54.1041 16.2835 53.6325 15.9488 53.2586 15.5141C52.8892 15.0794 52.6131 14.5599 52.4306 13.9557C52.248 13.3515 52.1567 12.6799 52.1567 11.9409C52.1567 10.9541 52.3175 10.0956 52.6392 9.36531C52.9652 8.63067 53.4651 8.06122 54.1389 7.65696C54.8127 7.25269 55.669 7.05056 56.708 7.05056C57.7425 7.05056 58.5924 7.25269 59.2574 7.65696C59.9269 8.06122 60.4224 8.63067 60.7441 9.36531C61.0701 10.0999 61.2331 10.9628 61.2331 11.9539ZM54.2758 11.9539C54.2758 12.619 54.3584 13.1928 54.5236 13.6753C54.6931 14.1535 54.9561 14.523 55.3126 14.7838C55.669 15.0403 56.1298 15.1685 56.6949 15.1685C57.2687 15.1685 57.7338 15.0403 58.0903 14.7838C58.4467 14.523 58.7054 14.1535 58.8662 13.6753C59.0314 13.1928 59.114 12.619 59.114 11.9539C59.114 10.9541 58.9271 10.1673 58.5532 9.59352C58.1794 9.01973 57.5643 8.73283 56.708 8.73283C56.1385 8.73283 55.6734 8.86324 55.3126 9.12405C54.9561 9.38052 54.6931 9.75002 54.5236 10.2325C54.3584 10.7107 54.2758 11.2845 54.2758 11.9539ZM66.2539 7.20053C67.4841 7.20053 68.3817 7.46569 68.9468 7.99602C69.5119 8.522 69.7945 9.24794 69.7945 10.1738C69.7945 10.5912 69.7314 10.9911 69.6054 11.3736C69.4793 11.7518 69.2728 12.0887 68.9859 12.3843C68.7034 12.6799 68.3252 12.9146 67.8514 13.0885C67.3776 13.258 66.7929 13.3428 66.0974 13.3428H65.2302V16.7334H63.2088V7.20053H66.2539ZM66.1495 8.85672H65.2302V11.6866H65.8952C66.2734 11.6866 66.6016 11.6366 66.8798 11.5366C67.158 11.4366 67.3732 11.2801 67.5254 11.0671C67.6775 10.8541 67.7536 10.5803 67.7536 10.2456C67.7536 9.7761 67.6232 9.42834 67.3623 9.2023C67.1015 8.97191 66.6973 8.85672 66.1495 8.85672ZM79.3534 7.20053V13.3689C79.3534 14.0252 79.2078 14.6186 78.9165 15.1489C78.6296 15.6749 78.1928 16.0922 77.6059 16.4009C77.0234 16.7095 76.2888 16.8638 75.402 16.8638C74.1414 16.8638 73.1807 16.5421 72.52 15.8988C71.8593 15.2554 71.5289 14.4034 71.5289 13.3428V7.20053H73.5437V13.0363C73.5437 13.8231 73.7045 14.3752 74.0262 14.6925C74.3479 15.0098 74.8239 15.1685 75.4542 15.1685C75.8976 15.1685 76.2562 15.0924 76.5301 14.9403C76.8083 14.7881 77.0126 14.5534 77.143 14.2361C77.2734 13.9187 77.3386 13.5145 77.3386 13.0233V7.20053H79.3534ZM81.6877 16.7334V7.20053H83.7091V15.0642H87.5757V16.7334H81.6877ZM95.0742 16.7334L94.383 14.4643H90.9076L90.2165 16.7334H88.0386L91.4032 7.1614H93.8744L97.252 16.7334H95.0742ZM93.9005 12.769L93.2093 10.552C93.1659 10.4042 93.1072 10.2151 93.0333 9.98475C92.9637 9.75002 92.892 9.51311 92.8181 9.27402C92.7486 9.03059 92.6921 8.81977 92.6486 8.64154C92.6051 8.81977 92.5443 9.04146 92.466 9.30663C92.3921 9.56744 92.3204 9.81522 92.2508 10.05C92.1813 10.2847 92.1313 10.452 92.1009 10.552L91.4162 12.769H93.9005ZM101.236 7.20053C102.101 7.20053 102.814 7.30485 103.375 7.51351C103.94 7.72216 104.359 8.03732 104.633 8.45897C104.907 8.88062 105.044 9.41313 105.044 10.0565C105.044 10.4912 104.961 10.8715 104.796 11.1976C104.631 11.5236 104.414 11.7996 104.144 12.0256C103.875 12.2517 103.583 12.4364 103.27 12.5799L106.074 16.7334H103.831L101.555 13.0754H100.48V16.7334H98.4583V7.20053H101.236ZM101.093 8.85672H100.48V11.4323H101.132C101.801 11.4323 102.279 11.3214 102.566 11.0997C102.857 10.8737 103.003 10.5433 103.003 10.1086C103.003 9.65656 102.847 9.33488 102.534 9.14362C102.225 8.95235 101.745 8.85672 101.093 8.85672Z"
+                            fill="white"></path>
+                    </svg>
+                    <div class="conteudo-inicial p-2 containerPreco center position-relative">
+
+
+                        <p><strong>R$<preco>500</preco><br>em créditos</strong></p>
+                        <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                        <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                        <a class="fundo">Ideal para empresas estabelecidas</a>
+                    </div>
+                </div>
+                <div class="conteudo-detalhado p-2 containerPreco center" style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                            realizar:</strong></p>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 7 Consultas com</span>
+                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                        <span style="display: block;"><b>&check;</b> ou 6 Consultas com</span>
+                        <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
+                        <span style="display: block;"><b>&check;</b> ou 8 Consultas Completas</span>
+                        <span style="display: block;"><b>&check;</b> ou 13 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 48 Consultas de</span>
+                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                    </p>
+
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="col-auto">
+                <div class="conteudo-inicial p-2 containerPreco center">
+                    <p><strong>R$<preco>750</preco><br>em créditos</strong></p>
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                    <!-- <a class="detalhes" href="#">Mais detalhes</a> -->
+
+                    <a class="fundo">Ideal para grandes empresas</a>
+                </div>
+                <div class="conteudo-detalhado p-2 containerPreco center" style="display: none; position: relative;">
+                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6">
+                            </path>
+                        </svg>
+                    </a>
+                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
+                            realizar:</strong></p>
+                    <p style="line-height: 15px;">
+                        <span style="display: block;"><b>&check;</b> 14 Consultas com</span>
+                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
+                        <span style="display: block;"><b>&check;</b> ou 13 Consultas com</span>
+                        <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
+                        <span style="display: block;"><b>&check;</b> ou 16 Consultas Completas</span>
+                        <span style="display: block;"><b>&check;</b> ou 27 Consultas Intermediárias</span>
+                        <span style="display: block;"><b>&check;</b> ou 95 Consultas de</span>
+                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
+                    </p>
+
+                    <a class="compre" href="https://acsp.com.br/boavista-equifax#top">Comprar este pacote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<img src="http://teste.acsp.com.br/public/upload/gallery/bvseqx/newfim3.png" class="imgdesk"
+    style="width: 70vw; height: auto; margin-bottom: 15px;" />
 <div class="position-relative d-flex imgmoba " style="margin: 25px 0px; margin-bottom: -px">
     <div class=" ">
         <h5 class="w-60 ms-md-5 fw-bold" style="font-size: 25px; margin:0px 25px;">
@@ -1598,7 +2104,7 @@
                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M17.55 3.41005C16.6331 2.48416 15.5411 1.75002 14.3376 1.25042C13.134 0.750812 11.8431 0.495737 10.54 0.500054C5.08005 0.500054 0.630049 4.95005 0.630049 10.4101C0.630049 12.1601 1.09005 13.8601 1.95005 15.3601L0.550049 20.5001L5.80005 19.1201C7.25005 19.9101 8.88005 20.3301 10.54 20.3301C16 20.3301 20.4501 15.8801 20.4501 10.4201C20.4501 7.77005 19.42 5.28005 17.55 3.41005ZM10.54 18.6501C9.06005 18.6501 7.61005 18.2501 6.34005 17.5001L6.04005 17.3201L2.92005 18.1401L3.75005 15.1001L3.55005 14.7901C2.7276 13.4771 2.29097 11.9593 2.29005 10.4101C2.29005 5.87005 5.99005 2.17005 10.53 2.17005C12.73 2.17005 14.8 3.03005 16.35 4.59005C17.1177 5.35392 17.726 6.2626 18.1397 7.26338C18.5534 8.26417 18.7642 9.33714 18.76 10.4201C18.7801 14.9601 15.08 18.6501 10.54 18.6501ZM15.06 12.4901C14.81 12.3701 13.59 11.7701 13.37 11.6801C13.14 11.6001 12.98 11.5601 12.81 11.8001C12.64 12.0501 12.17 12.6101 12.03 12.7701C11.89 12.9401 11.74 12.9601 11.49 12.8301C11.24 12.7101 10.44 12.4401 9.50005 11.6001C8.76005 10.9401 8.27005 10.1301 8.12005 9.88005C7.98005 9.63005 8.10005 9.50005 8.23005 9.37005C8.34005 9.26005 8.48005 9.08005 8.60005 8.94005C8.72005 8.80005 8.77005 8.69005 8.85005 8.53005C8.93005 8.36005 8.89005 8.22005 8.83005 8.10005C8.77005 7.98005 8.27005 6.76005 8.07005 6.26005C7.87005 5.78005 7.66005 5.84005 7.51005 5.83005H7.03005C6.86005 5.83005 6.60005 5.89005 6.37005 6.14005C6.15005 6.39005 5.51005 6.99005 5.51005 8.21005C5.51005 9.43005 6.40005 10.6101 6.52005 10.7701C6.64005 10.9401 8.27005 13.4401 10.75 14.5101C11.34 14.7701 11.8 14.9201 12.16 15.0301C12.75 15.2201 13.29 15.1901 13.72 15.1301C14.2 15.0601 15.19 14.5301 15.39 13.9501C15.6 13.3701 15.6 12.8801 15.53 12.7701C15.46 12.6601 15.31 12.6101 15.06 12.4901Z"
-                            fill="white" />
+                            fill="white"></path>
                     </svg>
                     Falar com um especialista
                 </a>
@@ -1611,7 +2117,7 @@
 </div>
 <style>
     .main-title {
-        color: #c41e3a;
+        color: #9E1C33;
         font-size: 32px;
         font-weight: bold;
         margin-bottom: 20px;
@@ -1631,7 +2137,7 @@
     }
 
     .section-title {
-        color: #00008b;
+        color: #002B4E;
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 10px;
@@ -1648,338 +2154,8 @@
         border-bottom-right-radius: 10px;
     }
 </style>
-<div class="center mt-md-4 imgdesk d-flex flex-column" style="text-align: center;">
-    <h1 class="main-title">Pacotes acessíveis para empresas<br>de todos os portes e diversos segmentos</h1>
-    <p class="subtitle">O serviço <span class="bold">Equifax | BoaVista</span> da <span class="bold">Associação
-            Comercial de São Paulo</span>, atende às necessidades específicas de cada empresa, desde pequenos
-        negócios até grandes corporações.</p>
-    <h2 class="section-title">Conheça nossos pacotes:</h2>
-    <div class="underline"></div>
 
-</div>
-
-<img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/pacotesMoba.png" class="imgmoba"
-    style="width: 90vw; margin: 25px">
 <div class="mt-5 w-100">
-    <div id="carouselPrec" class="carousel slide imgmoba center" data-bs-ride="carousel">
-        <div class="carousel-inner" style="width: 60%!important;">
-            <!-- Item 1 -->
-            <div class="carousel-item active">
-                <div class="conteudo-inicial p-2 containerPreco center w-100">
-                    <p><strong>R$<preco>60</preco><br>em créditos</strong></p>
-                    <a class="compre">Comprar este pacote</a>
-                    <a class="detalhes" href="#">Mais detalhes</a>
-                    <a class="fundo">Ideal para pequenos negócios</a>
-                </div>
-
-                <div class="conteudo-detalhado p-2 containerPreco center w-100"
-                    style="display: none; position: relative;">
-                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6" />
-                        </svg>
-                    </a>
-                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
-                            realizar:</strong></p>
-                    <p style="line-height: 15px;">
-                        <span style="display: block;"><b>&check;</b> 1 Consulta com Recomendação CPF ou CNPJ</span>
-                        <span style="display: block;"><b>&check;</b> ou 1 Consulta Completa</span>
-                        <span style="display: block;"><b>&check;</b> ou 2 Consultas Intermediárias</span>
-                        <span style="display: block;"><b>&check;</b> ou 7 Consultas de</span>
-                        <span style="display: block;">Confirmação Cadastral</span>
-                    </p>
-                    <a class="compre">Comprar este pacote</a>
-
-                </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="carousel-item">
-                <div class="conteudo-inicial p-2 containerPreco center w-100">
-                    <p><strong>R$<preco>130</preco><br>em créditos</strong></p>
-                    <a class="compre">Comprar este pacote</a>
-                    <a class="detalhes" href="#">Mais detalhes</a>
-                    <a class="fundo">Ideal para negócios em crescimento</a>
-                </div>
-
-                <div class="conteudo-detalhado p-2 containerPreco center w-100"
-                    style="display: none; position: relative;">
-                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6" />
-                        </svg>
-                    </a>
-                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
-                            realizar:</strong></p>
-                    <p style="line-height: 15px;">
-                        <span style="display: block;"><b>&check;</b> 2 Consultas com Recomendação CPF ou CNPJ</span>
-                        <span style="display: block;"><b>&check;</b> ou 3 Consultas Completas</span>
-                        <span style="display: block;"><b>&check;</b> ou 5 Consultas Intermediárias</span>
-                        <span style="display: block;"><b>&check;</b> ou 18 Consultas de Confirmação Cadastral</span>
-                    </p>
-
-                    <a class="compre">Comprar este pacote</a>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="carousel-item">
-                <div class="conteudo-inicial p-2 containerPreco center w-100">
-                    <p><strong>R$<preco>250</preco><br>em créditos</strong></p>
-                    <a class="compre">Comprar este pacote</a>
-                    <a class="detalhes" href="#">Mais detalhes</a>
-                    <a class="fundo">Ideal para negócios estabelecidos</a>
-                </div>
-
-                <div class="conteudo-detalhado p-2 containerPreco center w-100"
-                    style="display: none; position: relative;">
-                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6" />
-                        </svg>
-                    </a>
-                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
-                            realizar:</strong></p>
-                    <p style="line-height: 15px;">
-                        <span style="display: block;"><b>&check;</b> 5 Consultas com</span>
-                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
-                        <span style="display: block;"><b>&check;</b> ou 5 Consultas Completas</span>
-                        <span style="display: block;"><b>&check;</b> ou 9 Consultas Intermediárias</span>
-                        <span style="display: block;"><b>&check;</b> ou 32 Consultas de</span>
-                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
-                    </p>
-
-                    <a class="compre">Comprar este pacote</a>
-                </div>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="carousel-item">
-                <div class="conteudo-inicial p-2 containerPreco center w-100">
-                    <p><strong>R$<preco>500</preco><br>em créditos</strong></p>
-                    <a class="compre">Comprar este pacote</a>
-                    <a class="detalhes" href="#">Mais detalhes</a>
-                    <a class="fundo">Ideal para empresas em expansão</a>
-                </div>
-
-                <div class="conteudo-detalhado p-2 containerPreco center w-100"
-                    style="display: none; position: relative;">
-                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6" />
-                        </svg>
-                    </a>
-                    <p style="line-height: 15px;">
-                        <span style="display: block;"><b>&check;</b> 7 Consultas com</span>
-                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
-                        <span style="display: block;"><b>&check;</b> ou 6 Consultas com</span>
-                        <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
-                        <span style="display: block;"><b>&check;</b> ou 8 Consultas Completas</span>
-                        <span style="display: block;"><b>&check;</b> ou 13 Consultas Intermediárias</span>
-                        <span style="display: block;"><b>&check;</b> ou 48 Consultas de</span>
-                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
-                    </p>
-
-                    <a class="compre">Comprar este pacote</a>
-                </div>
-            </div>
-
-            <!-- Item 5 -->
-            <div class="carousel-item">
-                <div class="conteudo-inicial p-2 containerPreco center w-100">
-                    <p><strong>R$<preco>750</preco><br>em créditos</strong></p>
-                    <a class="compre">Comprar este pacote</a>
-                    <a class="detalhes" href="#">Mais detalhes</a>
-                    <a class="fundo">Ideal para grandes negócios</a>
-                </div>
-
-                <div class="conteudo-detalhado p-2 containerPreco center w-100"
-                    style="display: none; position: relative;">
-                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6" />
-                        </svg>
-                    </a>
-                    <p style="line-height: 15px;">
-                        <span style="display: block;"><b>&check;</b> 14 Consultas com</span>
-                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
-                        <span style="display: block;"><b>&check;</b> ou 13 Consultas com</span>
-                        <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
-                        <span style="display: block;"><b>&check;</b> ou 16 Consultas Completas</span>
-                        <span style="display: block;"><b>&check;</b> ou 27 Consultas Intermediárias</span>
-                        <span style="display: block;"><b>&check;</b> ou 95 Consultas de</span>
-                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
-                    </p>
-
-                    <a class="compre">Comprar este pacote</a>
-                </div>
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="3"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselPrec" data-bs-slide-to="4"
-                        aria-label="Slide 3"></button>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="container-fluid d-flex justify-content-center mt-md-5 mb-md-5 imgdesk">
-        <div class="row justify-content-center gx-2" style="max-width: 100vw;">
-            <!-- Item 1 -->
-            <div class="col-auto">
-                <div class="conteudo-inicial p-2 containerPreco center">
-                    <p><strong>R$<preco>60</preco><br>em créditos</strong></p>
-                    <a class="compre">Comprar este pacote</a>
-                    <a class="detalhes" href="#">Mais detalhes</a>
-                    <a class="fundo">Ideal para pequenos negócios</a>
-                </div>
-                <div class="conteudo-detalhado p-2 containerPreco center" style="display: none; position: relative;">
-                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6" />
-                        </svg>
-                    </a>
-                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
-                            realizar:</strong></p>
-                    <p style="line-height: 15px;">
-                        <span style="display: block;"><b>&check;</b> 1 Consulta com Recomendação CPF ou CNPJ</span>
-                        <span style="display: block;"><b>&check;</b> ou 1 Consulta Completa</span>
-                        <span style="display: block;"><b>&check;</b> ou 2 Consultas Intermediárias</span>
-                        <span style="display: block;"><b>&check;</b> ou 7 Consultas de</span>
-                        <span style="display: block;">Confirmação Cadastral</span>
-                    </p>
-
-                    <a class="compre">Comprar este pacote</a>
-
-                </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="col-auto">
-                <div class="conteudo-inicial p-2 containerPreco center">
-                    <p><strong>R$<preco>130</preco><br>em créditos</strong></p>
-                    <a class="compre">Comprar este pacote</a>
-                    <a class="detalhes" href="#">Mais detalhes</a>
-                    <a class="fundo">Ideal para negócios em crescimento</a>
-                </div>
-                <div class="conteudo-detalhado p-2 containerPreco center" style="display: none; position: relative;">
-                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6" />
-                        </svg>
-                    </a>
-                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
-                            realizar:</strong></p>
-                    <p style="line-height: 15px;">
-                        <span style="display: block;"><b>&check;</b> 2 Consultas com Recomendação CPF ou CNPJ</span>
-                        <span style="display: block;"><b>&check;</b> ou 3 Consultas Completas</span>
-                        <span style="display: block;"><b>&check;</b> ou 5 Consultas Intermediárias</span>
-                        <span style="display: block;"><b>&check;</b> ou 18 Consultas de Confirmação Cadastral</span>
-                    </p>
-
-                    <a class="compre">Comprar este pacote</a>
-
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="col-auto">
-                <div class="conteudo-inicial p-2 containerPreco center">
-                    <p><strong>R$<preco>250</preco><br>em créditos</strong></p>
-                    <a class="compre">Comprar este pacote</a>
-                    <a class="detalhes" href="#">Mais detalhes</a>
-                    <a class="fundo">Ideal para negócios em expansão</a>
-                </div>
-                <div class="conteudo-detalhado p-2 containerPreco center" style="display: none; position: relative;">
-                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6" />
-                        </svg>
-                    </a>
-                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
-                            realizar:</strong></p>
-                    <p style="line-height: 15px;">
-                        <span style="display: block;"><b>&check;</b> 5 Consultas com</span>
-                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
-                        <span style="display: block;"><b>&check;</b> ou 5 Consultas Completas</span>
-                        <span style="display: block;"><b>&check;</b> ou 9 Consultas Intermediárias</span>
-                        <span style="display: block;"><b>&check;</b> ou 32 Consultas de</span>
-                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
-                    </p>
-
-                    <a class="compre">Comprar este pacote</a>
-                </div>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="col-auto">
-                <div class="conteudo-inicial p-2 containerPreco center">
-                    <p><strong>R$<preco>500</preco><br>em créditos</strong></p>
-                    <a class="compre">Comprar este pacote</a>
-                    <a class="detalhes" href="#">Mais detalhes</a>
-                    <a class="fundo">Ideal para empresas estabelecidas</a>
-                </div>
-                <div class="conteudo-detalhado p-2 containerPreco center" style="display: none; position: relative;">
-                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6" />
-                        </svg>
-                    </a>
-                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
-                            realizar:</strong></p>
-                    <p style="line-height: 15px;">
-                        <span style="display: block;"><b>&check;</b> 7 Consultas com</span>
-                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
-                        <span style="display: block;"><b>&check;</b> ou 6 Consultas com</span>
-                        <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
-                        <span style="display: block;"><b>&check;</b> ou 8 Consultas Completas</span>
-                        <span style="display: block;"><b>&check;</b> ou 13 Consultas Intermediárias</span>
-                        <span style="display: block;"><b>&check;</b> ou 48 Consultas de</span>
-                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
-                    </p>
-
-                    <a class="compre">Comprar este pacote</a>
-                </div>
-            </div>
-
-            <!-- Item 5 -->
-            <div class="col-auto">
-                <div class="conteudo-inicial p-2 containerPreco center">
-                    <p><strong>R$<preco>750</preco><br>em créditos</strong></p>
-                    <a class="compre">Comprar este pacote</a>
-                    <a class="detalhes" href="#">Mais detalhes</a>
-                    <a class="fundo">Ideal para grandes empresas</a>
-                </div>
-                <div class="conteudo-detalhado p-2 containerPreco center" style="display: none; position: relative;">
-                    <a class="voltar" href="#" style="position: absolute; top: 10px; left: 10px;">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#32ADE6" />
-                        </svg>
-                    </a>
-                    <p style='line-height: 15px; margin-top: 25px'><strong>Com este pacote você pode
-                            realizar:</strong></p>
-                    <p style="line-height: 15px;">
-                        <span style="display: block;"><b>&check;</b> 14 Consultas com</span>
-                        <span style="display: block; margin-left: 20px;">Recomendação CPF</span>
-                        <span style="display: block;"><b>&check;</b> ou 13 Consultas com</span>
-                        <span style="display: block; margin-left: 20px;">Recomendação CNPJ</span>
-                        <span style="display: block;"><b>&check;</b> ou 16 Consultas Completas</span>
-                        <span style="display: block;"><b>&check;</b> ou 27 Consultas Intermediárias</span>
-                        <span style="display: block;"><b>&check;</b> ou 95 Consultas de</span>
-                        <span style="display: block; margin-left: 20px;">Confirmação Cadastral</span>
-                    </p>
-
-                    <a class="compre">Comprar este pacote</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <div class="w-100 d-flex justify-content-center align-items-center linha fs-6 fw-bold text-center mb-md-5 imgdesk"
@@ -2019,9 +2195,8 @@
                 currentItem.find('.conteudo-inicial').show();
             });
         });
-
     </script>
-    <div class="container-fluid center text-align flex-column">
+    <div id="desktflex" class="container-fluid center text-align flex-column">
         <h3 class="fw-bolder text-center w-100">Sua empresa também pode optar por compras de consultas pré-pagas!
             Confira as opções:</h3>
         <div class="botoes mt-md-5 mb-md-5">
@@ -2029,29 +2204,35 @@
                     xmlns="http://www.w3.org/2000/svg">
                     <path class="iconemudacpf"
                         d="M15 16.1667H9.53333C6.5464 16.1667 5.05293 16.1667 3.91207 16.7479C2.90852 17.2593 2.09262 18.0752 1.5813 19.0787C1 20.2196 1 21.7131 1 24.7V25.5H15M23.6666 24.8333L21.5523 22.7189M21.5523 22.7189C22.0349 22.2364 22.3333 21.5697 22.3333 20.8333C22.3333 19.3606 21.1394 18.1667 19.6667 18.1667C18.1939 18.1667 17 19.3606 17 20.8333C17 22.3061 18.1939 23.5 19.6667 23.5C20.4031 23.5 21.0697 23.2015 21.5523 22.7189ZM9.66667 10.8333C12.244 10.8333 14.3333 8.744 14.3333 6.16667C14.3333 3.58934 12.244 1.5 9.66667 1.5C7.08933 1.5 5 3.58934 5 6.16667C5 8.744 7.08933 10.8333 9.66667 10.8333Z"
-                        stroke="#F9FAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        stroke="#F9FAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
                 Consulta de CPF</a>
             <a class="botao" id="cnpjButton">
                 <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="iconemudacnpj" fill-rule="evenodd" clip-rule="evenodd"
                         d="M2.16638 28.5001C2.16638 27.9478 2.6141 27.5001 3.16638 27.5001H29.833C30.3853 27.5001 30.833 27.9478 30.833 28.5001C30.833 29.0524 30.3853 29.5001 29.833 29.5001H3.16638C2.6141 29.5001 2.16638 29.0524 2.16638 28.5001Z"
-                        fill="#002D44" />
+                        fill="#002D44"></path>
                     <path class="iconemudacnpj" fill-rule="evenodd" clip-rule="evenodd"
                         d="M7.16638 18.8334C6.98229 18.8334 6.83305 18.9827 6.83305 19.1667V27.1667C6.83305 27.3508 6.98229 27.5001 7.16638 27.5001H9.83305C10.0171 27.5001 10.1664 27.3508 10.1664 27.1667V19.1667C10.1664 18.9827 10.0171 18.8334 9.83305 18.8334H7.16638ZM4.83305 19.1667C4.83305 17.8781 5.87772 16.8334 7.16638 16.8334H9.83305C11.1217 16.8334 12.1664 17.8781 12.1664 19.1667V27.1667C12.1664 28.4554 11.1217 29.5001 9.83305 29.5001H7.16638C5.87772 29.5001 4.83305 28.4554 4.83305 27.1667V19.1667Z"
-                        fill="#002D44" />
+                        fill="#002D44"></path>
                     <path class="iconemudacnpj" fill-rule="evenodd" clip-rule="evenodd"
                         d="M7.49972 23.1667C7.49972 22.6145 7.94743 22.1667 8.49972 22.1667H9.16638C9.71867 22.1667 10.1664 22.6145 10.1664 23.1667C10.1664 23.719 9.71867 24.1667 9.16638 24.1667H8.49972C7.94743 24.1667 7.49972 23.719 7.49972 23.1667Z"
-                        fill="#002D44" />
+                        fill="#002D44"></path>
                     <path class="iconemudacnpj" fill-rule="evenodd" clip-rule="evenodd"
                         d="M12.4997 4.16675C12.3156 4.16675 12.1664 4.31599 12.1664 4.50008V27.1667C12.1664 27.3508 12.3156 27.5001 12.4997 27.5001H25.833C26.0171 27.5001 26.1664 27.3508 26.1664 27.1667V4.50008C26.1664 4.31599 26.0171 4.16675 25.833 4.16675H12.4997ZM10.1664 4.50008C10.1664 3.21142 11.2111 2.16675 12.4997 2.16675H25.833C27.1217 2.16675 28.1664 3.21142 28.1664 4.50008V27.1667C28.1664 28.4554 27.1217 29.5001 25.833 29.5001H12.4997C11.2111 29.5001 10.1664 28.4554 10.1664 27.1667V4.50008Z"
-                        fill="#002D44" />
-                    <path class="iconemudacnpj" d="M17.833 7.16675H15.1664V9.83342H17.833V7.16675Z" fill="#002D44" />
-                    <path class="iconemudacnpj" d="M23.1664 7.16675H20.4997V9.83342H23.1664V7.16675Z" fill="#002D44" />
-                    <path class="iconemudacnpj" d="M17.833 11.8334H15.1664V14.5001H17.833V11.8334Z" fill="#002D44" />
-                    <path class="iconemudacnpj" d="M23.1664 11.8334H20.4997V14.5001H23.1664V11.8334Z" fill="#002D44" />
-                    <path class="iconemudacnpj" d="M23.1664 16.5001H20.4997V19.1667H23.1664V16.5001Z" fill="#002D44" />
-                    <path class="iconemudacnpj" d="M23.1664 21.1667H20.4997V23.8334H23.1664V21.1667Z" fill="#002D44" />
+                        fill="#002D44"></path>
+                    <path class="iconemudacnpj" d="M17.833 7.16675H15.1664V9.83342H17.833V7.16675Z" fill="#002D44">
+                    </path>
+                    <path class="iconemudacnpj" d="M23.1664 7.16675H20.4997V9.83342H23.1664V7.16675Z" fill="#002D44">
+                    </path>
+                    <path class="iconemudacnpj" d="M17.833 11.8334H15.1664V14.5001H17.833V11.8334Z" fill="#002D44">
+                    </path>
+                    <path class="iconemudacnpj" d="M23.1664 11.8334H20.4997V14.5001H23.1664V11.8334Z" fill="#002D44">
+                    </path>
+                    <path class="iconemudacnpj" d="M23.1664 16.5001H20.4997V19.1667H23.1664V16.5001Z" fill="#002D44">
+                    </path>
+                    <path class="iconemudacnpj" d="M23.1664 21.1667H20.4997V23.8334H23.1664V21.1667Z" fill="#002D44">
+                    </path>
                 </svg>
 
                 Consulta de CNPJ</a>
@@ -2063,7 +2244,7 @@
                         <div class="row justify-content-center align-items-center h-100">
                             <div class="col-md-3 h-100 compraConsul center">
                                 <h5 style="text-align: center; color: #4A96D2">Define<br>Limite Positivo</h5>
-                                <h4>R$ 80,00</h4>
+                                <h4>R$ 60,00</h4>
                                 <p class="fontAcerta">
                                     <strong>&check;</strong> Score<br>
                                     <strong>&check;</strong> Dados cadastrais<br>
@@ -2074,7 +2255,11 @@
                                     <br>
                                     e mais 10 serviços
                                 </p>
-                                <a class="compre">Mais detalhes</a>
+
+                                <div style="flex-direction: row; display: flex;">
+                                    <a class="compre cpfopenModalBtn">Mais detalhes</a>
+                                    <a class="compre" href="https://acsp.com.br/boavista-equifax#area">Compre agora</a>
+                                </div>
 
                             </div>
                         </div>
@@ -2095,8 +2280,11 @@
                                         <br>
                                         e mais 10 serviços
                                     </p>
-                                    <a class="compre">Mais detalhes</a>
-
+                                    <div style="flex-direction: row; display: flex;">
+                                        <a class="compre cpfopenModalBtn">Mais detalhes</a>
+                                        <a class="compre" href="https://acsp.com.br/boavista-equifax#area">Compre
+                                            agora</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2126,14 +2314,17 @@
                                     <br>
                                     e mais 10 serviços
                                 </p>
-                                <a class="compre" href="#">Mais detalhes</a>
+                                <div style="flex-direction: row; display: flex;">
+                                    <a class="compre cnpjopenModalBtn">Mais detalhes</a>
+                                    <a class="compre" href="https://acsp.com.br/boavista-equifax#area">Compre agora</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="row justify-content-center align-items-center h-100">
                             <div class="col-md-6 compraConsul text-center">
-                                <h5 style="color: #58C5C6">Acerta <br>Positivo</h5>
+                                <h5 style="color: #58C5C6">Acerta Essencial<br>Positivo</h5>
                                 <h4>R$ 15,00</h4>
                                 <p class="fontAcerta">
                                     <strong>&check;</strong> Score<br>
@@ -2145,7 +2336,10 @@
                                     <br>
                                     e mais 10 serviços
                                 </p>
-                                <a class="compre" href="#">Mais detalhes</a>
+                                <div style="flex-direction: row; display: flex;">
+                                    <a class="compre cnpjopenModalBtn">Mais detalhes</a>
+                                    <a class="compre" href="https://acsp.com.br/boavista-equifax#area">Compre agora</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2160,10 +2354,9 @@
         </div>
 
         <div class="container-fluid center imgdesk">
-            <div class="cpf mt-md-4 flex-column row w-100 justify-content-center" style="display: none"
-                id="cpfContainer">
+            <div class="cpf mt-md-4 flex-column row w-100 justify-content-center" id="cpfContainer">
                 <div class="col-md-3 imgdesk">&nbsp;</div>
-                <div class="col-md-3 h-100 compraConsul center">
+                <div class="col-md-3 h-100 compraConsul center" style="margin-left: 41px;">
                     <h5 style="text-align: center; color: #4A96D2">Acerta Completo<br>Positivo</h5>
                     <h4>R$ 40,00</h4>
                     <p class="fontAcerta">
@@ -2176,11 +2369,14 @@
                         <br>
                         e mais 10 serviços
                     </p>
-                    <a class="compre">Mais detalhes</a>
+                    <div style="flex-direction: row; display: flex;">
+                        <a class="compre cnpjopenModalBtn">Mais detalhes</a>
+                        <a class="compre" href="https://acsp.com.br/boavista-equifax#area">Compre agora</a>
+                    </div>
                 </div>
                 <div class="col-md-3 h-100 compraConsul center">
                     <div class="col-md-3 h-100 compraConsul center">
-                        <h5 style="text-align: center; color: #58C5C6">Acerta <br>Positivo</h5>
+                        <h5 style="text-align: center; color: #58C5C6">Acerta Essencial<br>Positivo</h5>
                         <h4>R$ 15,00</h4>
                         <p class="fontAcerta">
                             <strong>&check;</strong> Score<br>
@@ -2192,7 +2388,10 @@
                             <br>
                             e mais 10 serviços
                         </p>
-                        <a class="compre">Mais detalhes</a>
+                        <div style="flex-direction: row; display: flex;">
+                            <a class="compre cnpjopenModalBtn">Mais detalhes</a>
+                            <a class="compre" href="https://acsp.com.br/boavista-equifax#area">Compre agora</a>
+                        </div>
 
                     </div>
                 </div>
@@ -2201,11 +2400,12 @@
                 </div>
             </div>
 
-            <div class="cpf mt-md-4  flex-column row w-100 justify-content-center" id="cnpjContainer">
+            <div class="cpf mt-md-4  flex-column row w-100 justify-content-center" id="cnpjContainer"
+                style="display: none">
                 <div class="col-md-3 imgdesk">&nbsp;</div>
-                <div class="col-md-3 h-100 compraConsul center">
-                    <h5 style="text-align: center; color: #4A96D2">Define<br>Limite Positivo</h5>
-                    <h4>R$ 80,00</h4>
+                <div class="col-md-3 h-100 compraConsul center" style="margin-left: 41px;">
+                    <h5 style="text-align: center; color: #4A96D2 ">Define<br>Limite Positivo</h5>
+                    <h4>R$ 60,00</h4>
                     <p class="fontAcerta">
                         <strong>&check;</strong> Score<br>
                         <strong>&check;</strong> Dados cadastrais<br>
@@ -2216,8 +2416,10 @@
                         <br>
                         e mais 10 serviços
                     </p>
-                    <a class="compre">Mais detalhes</a>
-
+                    <div style="flex-direction: row; display: flex;">
+                        <a class="compre cpfopenModalBtn">Mais detalhes</a>
+                        <a class="compre" href="https://acsp.com.br/boavista-equifax#area">Compre agora</a>
+                    </div>
                 </div>
                 <div class="col-md-3 h-100 compraConsul center">
                     <div class="col-md-3 h-100 compraConsul center">
@@ -2233,8 +2435,10 @@
                             <br>
                             e mais 10 serviços
                         </p>
-                        <a class="compre">Mais detalhes</a>
-
+                        <div style="flex-direction: row; display: flex;">
+                            <a class="compre cpfopenModalBtn">Mais detalhes</a>
+                            <a class="compre" href="https://acsp.com.br/boavista-equifax#area">Compre agora</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 imgdesk">&nbsp;
@@ -2246,9 +2450,12 @@
 </div>
 <div class="center mt-md-5 mb-lg-5">
     <a style="color: #002D44; font-weight: 700; font-size: 21px; text-decoration: underline;   text-underline-offset: 10px;"
-        id="openModalBtn">Confira os produtos</a>
+        id="openModalBtn">Confira lista completa de consultas</a>
 
 </div>
+
+<img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/pacotesMoba.png" class="imgmoba"
+    style="width: 90vw; margin: 25px">
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -2262,41 +2469,25 @@
 
     .modal {
         display: none;
-        /* Escondido por padrão */
         position: fixed;
-        /* Fica fixo na tela */
-        z-index: 1;
-        /* Sobrepõe outros elementos */
+        z-index: 99999999999999999;
         left: 0;
         top: 0;
         width: 100%;
-        /* Largura total da tela */
         height: 100%;
-        /* Altura total da tela */
         overflow: auto;
-        /* Permite rolagem se necessário */
         background-color: rgba(0, 0, 0, 0.4);
-        /* Fundo semi-transparente */
     }
 
     .modal-content {
         background-color: white;
-        /* Fundo branco para o conteúdo */
         margin: auto;
-        /* Centraliza o modal */
         padding: 20px;
-        /* Espaçamento interno */
         border-radius: 8px;
-        /* Bordas arredondadas */
         width: 90%;
-        /* Largura máxima do modal */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        /* Sombra para profundidade */
-        /* height: 100%; Remover altura fixa para ajustar ao conteúdo */
         display: flex;
-        /* Use flexbox se precisar de layout flexível */
         flex-direction: column;
-        /* Permite empilhar elementos verticalmente */
     }
 
     .modal-header {
@@ -2476,6 +2667,10 @@
             text-align: center;
         }
 
+        .carousel-inner {
+            overflow: inherit;
+        }
+
         .info-card {
             background-color: #5ba4e5;
             padding: 20px;
@@ -2532,6 +2727,41 @@
         .sidebar-item {
             padding: 15px 10px;
         }
+
+        .modal-header {
+            gap: 10px;
+            /* Reduz o espaçamento para telas pequenas */
+        }
+
+        .modal-header {
+            display: flex;
+            flex-direction: column;
+            /* Coloca os elementos em coluna */
+            align-items: center;
+            /* Centraliza horizontalmente */
+            gap: 15px;
+            /* Espaçamento entre os elementos */
+        }
+
+        .tab-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            /* Espaçamento entre os botões */
+        }
+
+        .button-containera {
+            text-align: center;
+            /* Centraliza o botão */
+        }
+
+    }
+
+    .button-containera {
+        font-size: 15px;
+        left: 448px;
+        display: flex;
+        position: absolute;
     }
 </style>
 <div id="myModal" class="modal">
@@ -2542,7 +2772,8 @@
                     <svg width="15" height="16" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="iconemudacpf"
                             d="M15 15.6667H9.53333C6.5464 15.6667 5.05293 15.6667 3.91207 16.2479C2.90852 16.7593 2.09262 17.5752 1.5813 18.5787C1 19.7196 1 21.2131 1 24.2V25H15M23.6666 24.3333L21.5523 22.2189M21.5523 22.2189C22.0349 21.7364 22.3333 21.0697 22.3333 20.3333C22.3333 18.8606 21.1394 17.6667 19.6667 17.6667C18.1939 17.6667 17 18.8606 17 20.3333C17 21.8061 18.1939 23 19.6667 23C20.4031 23 21.0697 22.7015 21.5523 22.2189ZM9.66667 10.3333C12.244 10.3333 14.3333 8.244 14.3333 5.66667C14.3333 3.08934 12.244 1 9.66667 1C7.08933 1 5 3.08934 5 5.66667C5 8.244 7.08933 10.3333 9.66667 10.3333Z"
-                            stroke="#F9FAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            stroke="#F9FAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
                     </svg>
                     &nbsp;Consulta de CPF
                 </div>
@@ -2550,32 +2781,39 @@
                     <svg width="20" height="18" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M0.666504 26.9998C0.666504 26.4476 1.11422 25.9998 1.6665 25.9998H28.3332C28.8855 25.9998 29.3332 26.4476 29.3332 26.9998C29.3332 27.5521 28.8855 27.9998 28.3332 27.9998H1.6665C1.11422 27.9998 0.666504 27.5521 0.666504 26.9998Z"
-                            fill="#645E5E" class="iconemudacnpj" />
+                            fill="#645E5E" class="iconemudacnpj"></path>
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M5.6665 17.3332C5.48241 17.3332 5.33317 17.4824 5.33317 17.6665V25.6665C5.33317 25.8506 5.48241 25.9998 5.6665 25.9998H8.33317C8.51727 25.9998 8.6665 25.8506 8.6665 25.6665V17.6665C8.6665 17.4824 8.51727 17.3332 8.33317 17.3332H5.6665ZM3.33317 17.6665C3.33317 16.3778 4.37784 15.3332 5.6665 15.3332H8.33317C9.62184 15.3332 10.6665 16.3778 10.6665 17.6665V25.6665C10.6665 26.9552 9.62184 27.9998 8.33317 27.9998H5.6665C4.37784 27.9998 3.33317 26.9552 3.33317 25.6665V17.6665Z"
-                            fill="#645E5E" class="iconemudacnpj" />
+                            fill="#645E5E" class="iconemudacnpj"></path>
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M5.99984 21.6665C5.99984 21.1142 6.44755 20.6665 6.99984 20.6665H7.6665C8.21879 20.6665 8.6665 21.1142 8.6665 21.6665C8.6665 22.2188 8.21879 22.6665 7.6665 22.6665H6.99984C6.44755 22.6665 5.99984 22.2188 5.99984 21.6665Z"
-                            fill="#645E5E" class="iconemudacnpj" />
+                            fill="#645E5E" class="iconemudacnpj"></path>
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M10.9998 2.6665C10.8157 2.6665 10.6665 2.81574 10.6665 2.99984V25.6665C10.6665 25.8506 10.8157 25.9998 10.9998 25.9998H24.3332C24.5173 25.9998 24.6665 25.8506 24.6665 25.6665V2.99984C24.6665 2.81574 24.5173 2.6665 24.3332 2.6665H10.9998ZM8.6665 2.99984C8.6665 1.71117 9.71117 0.666504 10.9998 0.666504H24.3332C25.6218 0.666504 26.6665 1.71117 26.6665 2.99984V25.6665C26.6665 26.9552 25.6218 27.9998 24.3332 27.9998H10.9998C9.71117 27.9998 8.6665 26.9552 8.6665 25.6665V2.99984Z"
-                            fill="#645E5E" class="iconemudacnpj" />
-                        <path d="M16.3332 5.6665H13.6665V8.33317H16.3332V5.6665Z" fill="#645E5E"
-                            class="iconemudacnpj" />
-                        <path d="M21.6665 5.6665H18.9998V8.33317H21.6665V5.6665Z" fill="#645E5E"
-                            class="iconemudacnpj" />
+                            fill="#645E5E" class="iconemudacnpj"></path>
+                        <path d="M16.3332 5.6665H13.6665V8.33317H16.3332V5.6665Z" fill="#645E5E" class="iconemudacnpj">
+                        </path>
+                        <path d="M21.6665 5.6665H18.9998V8.33317H21.6665V5.6665Z" fill="#645E5E" class="iconemudacnpj">
+                        </path>
                         <path d="M16.3332 10.3332H13.6665V12.9998H16.3332V10.3332Z" fill="#645E5E"
-                            class="iconemudacnpj" />
+                            class="iconemudacnpj"></path>
                         <path d="M21.6665 10.3332H18.9998V12.9998H21.6665V10.3332Z" fill="#645E5E"
-                            class="iconemudacnpj" />
+                            class="iconemudacnpj"></path>
                         <path d="M21.6665 14.9998H18.9998V17.6665H21.6665V14.9998Z" fill="#645E5E"
-                            class="iconemudacnpj" />
+                            class="iconemudacnpj"></path>
                         <path d="M21.6665 19.6665H18.9998V22.3332H21.6665V19.6665Z" fill="#645E5E"
-                            class="iconemudacnpj" />
+                            class="iconemudacnpj"></path>
                     </svg>
 
                     &nbsp;Consulta de CNPJ
                 </div>
+
+            </div>
+            <div class="button-containera">
+                <a class="btn btn-primary close" href="https://acsp.com.br/boavista-equifax#area"
+                    style="font-size: 15px;">
+                    Compre agora
+                </a>
             </div>
             <span class="close">&times;</span>
         </div>
@@ -2655,12 +2893,7 @@
                             <tr>
                                 <th>Informações cadastrais</th>
                                 <th>Acerta Essencial Positivo<br>R$ 15,00</th>
-                                <th>Acerta Completo Positivo<br>R$ 15,00</th>
-                            </tr>
-                            <tr>
-                                <td>Nº de Título de Eleitor</td>
-                                <td><i class="fas fa-check check"></td>
-                                <td><i class="fas fa-check check"></td>
+                                <th>Acerta Completo Positivo<br>R$ 40,00</th>
                             </tr>
                             <tr>
                                 <td>Confirmação de Telefone e CEP</td>
@@ -2678,7 +2911,7 @@
                                 <td><i class="fas fa-check check"></td>
                             </tr>
                             <tr>
-                                <td>Situação CPF na RFB</td>
+                                <td>Situação CPF na Receita Federal</td>
                                 <td><i class="fas fa-check check"></td>
                                 <td><i class="fas fa-check check"></td>
                             </tr>
@@ -2689,14 +2922,14 @@
                             </tr>
                             <tr>
                                 <td>Telefones Vinculados</td>
-                                <td><i class="fas fa-times cross"></td>
+                                <td><i class="fas fa-minus dash"></td>
                                 <td><i class="fas fa-check check"></td>
                             </tr>
-                            <tr>
-                                <td>Participação em Empresas</td>
-                                <td><i class="fas fa-check check"></td>
-                                <td><i class="fas fa-check check"></td>
-                            </tr>
+                            <!-- <tr>
+                                                <td>Participação em Empresas</td>
+                                                <td><i class="fas fa-check check"></td>
+                                                <td><i class="fas fa-check check"></td>
+                                            </tr> -->
 
                         </table>
                     </div>
@@ -2712,7 +2945,7 @@
                             <tr>
                                 <th>Restritivos</th>
                                 <th>Acerta Essencial Positivo<br>R$ 15,00</th>
-                                <th>Acerta Completo Positivo<br>R$ 15,00</th>
+                                <th>Acerta Completo Positivo<br>R$ 40,00</th>
                             </tr>
                             <tr>
                                 <td>Registro de Débito</td>
@@ -2725,12 +2958,12 @@
                                 <td><i class="fas fa-check check"></td>
                             </tr>
                             <tr>
-                                <td>Protestos (Nacional ou SP)</td>
+                                <td>Protestos</td>
                                 <td><i class="fas fa-check check"></td>
                                 <td><i class="fas fa-check check"></td>
                             </tr>
                             <tr>
-                                <td>Identificação CCF</td>
+                                <td>CCF</td>
                                 <td><i class="fas fa-check check"></td>
                                 <td><i class="fas fa-check check"></td>
                             </tr>
@@ -2760,49 +2993,7 @@
                             <tr>
                                 <th>Comportamento</th>
                                 <th>Acerta Essencial Positivo<br>R$ 15,00</th>
-                                <th>Acerta Completo Positivo<br>R$ 15,00</th>
-                            </tr>
-                            <tr>
-                                <td>Alerta de Documentos</td>
-                                <td><i class="fas fa-check check"></td>
-                                <td><i class="fas fa-check check"></td>
-                            </tr>
-                            <tr>
-                                <td>Consultas Anteriores</td>
-                                <td><i class="fas fa-check check "></td>
-                                <td><i class="fas fa-minus dash"></td>
-                            </tr>
-                            <tr>
-                                <td>Consultas Anteriores por Segmento</td>
-                                <td><i class="fas fa-times cross"></td>
-                                <td><i class="fas fa-check check"></td>
-                            </tr>
-                            <tr>
-                                <td>Outras grafias</td>
-                                <td><i class="fas fa-times cross"></td>
-                                <td><i class="fas fa-check check"></td>
-                            </tr>
-                            <tr>
-                                <td>Alerta de Inconsistência</td>
-                                <td><i class="fas fa-times cross"></td>
-                                <td><i class="fas fa-check check"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div id="cpf-comportamento" class="content-section">
-
-                    <div class="legend">
-                        <span class="legend-item"><i class="fas fa-check check"></i> Disponível</span>
-                        <span class="legend-item"><i class="fas fa-times cross"></i> Indisponível</span>
-                        <span class="legend-item"><i class="fas fa-minus dash"></i> Inexistente</span>
-                    </div>
-                    <div class="table-container">
-                        <table>
-                            <tr>
-                                <th>Comportamento</th>
-                                <th>Acerta Essencial Positivo<br>R$ 15,00</th>
-                                <th>Acerta Completo Positivo<br>R$ 15,00</th>
+                                <th>Acerta Completo Positivo<br>R$ 40,00</th>
                             </tr>
                             <tr>
                                 <td>Alerta de Documentos</td>
@@ -2844,7 +3035,7 @@
                             <tr>
                                 <th>Opção de Consulta Gratuita a cheque</th>
                                 <th>Acerta Essencial Positivo<br>R$ 15,00</th>
-                                <th>Acerta Completo Positivo<br>R$ 15,00</th>
+                                <th>Acerta Completo Positivo<br>R$ 40,00</th>
                             </tr>
                             <tr>
                                 <td>CCF</td>
@@ -2904,13 +3095,11 @@
                                 <th>Informações
                                     POSITIVAS</th>
                                 <th>Define Risco Positivo<br>R$ 25,00</th>
-                                <th>Define Negócio Positivo<br>R$ 30,00</th>
                                 <th>Define Limite Positivo<br>
-                                    R$ 80,00</th>
+                                    R$ 60,00</th>
                             </tr>
                             <tr>
                                 <td>Pagamento Pontual (até 5 dias após vencimento);</td>
-                                <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
@@ -2921,19 +3110,16 @@
                                     Crédito;</td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
-                                <td><i class="fas fa-check check"><i></td>
                             </tr>
 
                             <tr>
                                 <td>Compromissos</td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
-                                <td><i class="fas fa-check check"><i></td>
                             </tr>
 
                             <tr>
                                 <td>Crédito Obtido</td>
-                                <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
@@ -2944,12 +3130,10 @@
                                     Crédito;</td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
-                                <td><i class="fas fa-check check"><i></td>
                             </tr>
 
                             <tr>
                                 <td>Tempo de Relacionamento com Fornecedores (%);</td>
-                                <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
@@ -2958,7 +3142,6 @@
                                 <td>Acontecimentos Importantes;
                                     Data;
                                     Pontuação de Crédito;</td>
-                                <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
@@ -2984,13 +3167,11 @@
                                     informações positivas)
                                 </th>
                                 <th>Define Risco Positivo<br>R$ 25,00</th>
-                                <th>Define Negócio Positivo<br>R$ 30,00</th>
                                 <th>Define Limite Positivo<br>
-                                    R$ 80,00</th>
+                                    R$ 60,00</th>
                             </tr>
                             <tr>
                                 <td> Score Aprovação PJ</td>
-                                <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
@@ -2999,24 +3180,20 @@
                                 <td>Faixa de funcionários</td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
-                                <td><i class="fas fa-check check"><i></td>
                             </tr>
 
                             <tr>
                                 <td>Recomendação de Decisão</td>
-                                <td><i class="fas fa-times cross"><i></td>
                                 <td><i class="fas fa-times cross"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
                             <tr>
                                 <td>Faturamento Presumido</td>
                                 <td><i class="fas fa-times cross"><i></td>
-                                <td><i class="fas fa-times cross"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
                             <tr>
                                 <td>Limite de Crédito</td>
-                                <td><i class="fas fa-times cross"><i></td>
                                 <td><i class="fas fa-times cross"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
@@ -3037,20 +3214,23 @@
                                 <th>Demais informações
                                 </th>
                                 <th>Define Risco Positivo<br>R$ 25,00</th>
-                                <th>Define Negócio Positivo<br>R$ 30,00</th>
                                 <th>Define Limite Positivo<br>
-                                    R$ 80,00</th>
+                                    R$ 60,00</th>
                             </tr>
                             <tr>
                                 <td>Cadastral Completo</td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
-                                <td><i class="fas fa-check check"><i></td>
                             </tr>
+
 
                             <tr>
                                 <td>Localização</td>
                                 <td><i class="fas fa-check check"><i></td>
+                                <td><i class="fas fa-check check"><i></td>
+                            </tr>
+                            <tr>
+                                <td>Restritivos Completo</td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
@@ -3059,24 +3239,26 @@
                                 <td>Consultas</td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
-                                <td><i class="fas fa-check check"><i></td>
                             </tr>
                             <tr>
                                 <td>Alerta de Inconsistência</td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
-                                <td><i class="fas fa-check check"><i></td>
+                            </tr>
+                            <tr>
+                                <td>Participações em Empresas
+                                </td>
+                                <td><i class="fas fa-minus dash"><i></td>
+                                <td><i class="fas fa-minus dash"><i></td>
                             </tr>
                             <tr>
                                 <td>Participações em Empresas
                                     com Resumo de Restritivos</td>
                                 <td><i class="fas fa-minus dash"><i></td>
-                                <td><i class="fas fa-times cross"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
                             <tr>
                                 <td>Quadro Societário</td>
-                                <td><i class="fas fa-times cross"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-minus dash"><i></td>
                             </tr>
@@ -3084,38 +3266,25 @@
                                 <td>Quadro Societário com
                                     Resumo de Restritivos</td>
                                 <td><i class="fas fa-times cross"><i></td>
-                                <td><i class="fas fa-times cross"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
                             <tr>
                                 <td>Ações Cíveis e Falência</td>
                                 <td><i class="fas fa-times cross"><i></td>
-                                <td><i class="fas fa-times cross"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
                             <tr>
-                                <td>Gera o Alerta 30 dias</td>
-                                <td><i class="fas fa-check check"><i></td>
-                                <td><i class="fas fa-check check"><i></td>
-                                <td><i class="fas fa-check check"><i></td>
-                            </tr>
-                            <tr>
-                                <td>Monitoramento Gratuito
-                                    das Informações Restritivas
-                                    do Documento Consultado
-                                    por 30 dias</td>
-                                <td><i class="fas fa-check check"><i></td>
+                                <td>Alerta 30 dias</td>
                                 <td><i class="fas fa-check check"><i></td>
                                 <td><i class="fas fa-check check"><i></td>
                             </tr>
                             <tr>
-                                <td class="w-100" colspan="4">Features que podem ser adicionadas à consulta:</td>
+                                <td class="w-100" colspan="3">Features que podem ser adicionadas à consulta:</td>
                             </tr>
                             <tr>
                                 <td>+ Extras e Complementos: ANVISA;
                                     empresas no mesmo endereço;
                                     informações da folha de cheque</td>
-                                <td>Opcional</td>
                                 <td>Opcional</td>
                                 <td>Opcional</td>
                             </tr>
@@ -3126,11 +3295,10 @@
                                     e restritivos</td>
                                 <td>Opcional</td>
                                 <td>Opcional</td>
-                                <td>Opcional</td>
                             </tr>
 
                             <tr>
-                                <td class="w-100" colspan="4">Todas as features e extras podem ser adicionadas ao
+                                <td class="w-100" colspan="3">Todas as features e extras podem ser adicionadas ao
                                     relatório, com
                                     custo adicional, sem a necessidade de fazer
                                     uma nova consulta (exceto informações da folha de cheque)</td>
@@ -3147,87 +3315,121 @@
     </div>
 </div>
 <script>
-    const tabs = document.querySelectorAll('.tab');
-    const sidebars = {
-        cpf: document.getElementById('cpf-sidebar'),
-        cnpj: document.getElementById('cnpj-sidebar')
-    };
-    const sidebarItems = document.querySelectorAll('.sidebar-item');
-    const contentSections = document.querySelectorAll('.content-section');
+    $(document).ready(function () {
+        const tabs = document.querySelectorAll('.tab');
+        const sidebars = {
+            cpf: document.getElementById('cpf-sidebar'),
+            cnpj: document.getElementById('cnpj-sidebar')
+        };
+        const sidebarItems = document.querySelectorAll('.sidebar-item');
+        const contentSections = document.querySelectorAll('.content-section');
 
-    // Função para ajustar a exibição do sidebar com base na largura da janela
-    function adjustSidebarDisplay() {
-        const width = window.innerWidth;
-        Object.values(sidebars).forEach(sidebar => {
-            if (width < 1000) {
-                sidebar.style.display = 'flex';
-            } else {
-                sidebar.style.display = 'block';
-            }
+        // Função para ajustar a exibição do sidebar com base na largura da janela
+        function adjustSidebarDisplay() {
+            const width = window.innerWidth;
+            Object.values(sidebars).forEach(sidebar => {
+                if (width < 1000) {
+                    sidebar.style.display = 'flex';
+                } else {
+                    sidebar.style.display = 'block';
+                }
+            });
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const activeTab = tab.getAttribute('data-tab');
+                Object.values(sidebars).forEach(sidebar => sidebar.style.display = 'none');
+                sidebars[activeTab].style.display = window.innerWidth < 1000 ? 'flex' : 'block';
+                sidebarItems.forEach(item => item.classList.remove('active'));
+                sidebars[activeTab].querySelector('.sidebar-item').classList.add('active');
+                contentSections.forEach(section => section.classList.remove('active'));
+                document.getElementById(`${activeTab}-info`).classList.add('active');
+            });
         });
-    }
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            const activeTab = tab.getAttribute('data-tab');
-            Object.values(sidebars).forEach(sidebar => sidebar.style.display = 'none');
-            sidebars[activeTab].style.display = window.innerWidth < 1000 ? 'flex' : 'block';
-            sidebarItems.forEach(item => item.classList.remove('active'));
-            sidebars[activeTab].querySelector('.sidebar-item').classList.add('active');
-            contentSections.forEach(section => section.classList.remove('active'));
-            document.getElementById(`${activeTab}-info`).classList.add('active');
+        sidebarItems.forEach(item => {
+            item.addEventListener('click', () => {
+                sidebarItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                const contentId = item.getAttribute('data-content');
+                contentSections.forEach(section => section.classList.remove('active'));
+                document.getElementById(contentId).classList.add('active');
+            });
         });
-    });
 
-    sidebarItems.forEach(item => {
-        item.addEventListener('click', () => {
-            sidebarItems.forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
-            const contentId = item.getAttribute('data-content');
-            contentSections.forEach(section => section.classList.remove('active'));
-            document.getElementById(contentId).classList.add('active');
-        });
-    });
+        const modal = document.getElementById("myModal");
+        const openModalBtn = document.getElementById("openModalBtn");
+        const closeBtn = document.querySelector(".close");
 
-    const modal = document.getElementById("myModal");
-    const openModalBtn = document.getElementById("openModalBtn");
-    const closeBtn = document.querySelector(".close");
+        openModalBtn.onclick = function () {
+            modal.style.display = "flex";
+        }
 
-    openModalBtn.onclick = function () {
-        modal.style.display = "flex";
-    }
-
-    closeBtn.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
+        closeBtn.onclick = function () {
             modal.style.display = "none";
         }
-    }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
+        // Função para alternar o 'active' entre os botões
+        function toggleActive(button) {
+            // Remove 'active' de todos os botões
+            cpfButton.classList.remove('active');
+            cnpjButton.classList.remove('active');
+
+            // Adiciona 'active' no botão clicado
+            button.classList.add('active');
+        }
+
+        cpfButton.addEventListener('click', function () {
+            toggleActive(cpfButton);
+            $('.iconemudacnpj').attr('fill', '#002D44');
+            $('.iconemudacpf').attr('stroke', 'white');
+            $('#cpfContainer').show()
+            $('#cnpjContainer').hide()
+            $('#carouselExample').show()
+            $('#carouselExample2').hide()
+        });
+
+        cnpjButton.addEventListener('click', function () {
+            toggleActive(cnpjButton);
+            $('.iconemudacpf').attr('stroke', '#002D44');
+            $('.iconemudacnpj').attr('fill', 'white');
+            $('#cnpjContainer').show()
+            $('#cpfContainer').hide()
+            $('#carouselExample').hide()
+            $('#carouselExample2').show()
+
+        });
+        $('.cnpjopenModalBtn').click(() => {
+            $('#myModal').css('display', 'flex').addClass('show');
+        });
+
+        $('.cpfopenModalBtn').click(() => {
+            $('#myModal').css('display', 'flex').addClass('show');
+        });
+    })
 </script>
 
-<div class="fachaBoaPlan">
-    <p>A <b>Equifax | BoaVista </b>&nbsp;está presente em 24 países ao redor do mundo,
-        <br>sempre colocando os
-        clientes em primeiro lugar.
-    </p>
-</div>
-<h1 style="/* Corpo Final */
-    font-weight: 800;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    color: #002D44;
-    
-    ">
-    Para consultas pré-pagas entre com seu código de associado. Caso ainda não possua cadastro conosco, basta
-    cadastrar-se gratuitamente e realizar suas compras.
+<h1 id="area" style="/* Corpo Final */
+                    font-weight: 800;
+                    font-size: 30px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    
+                    color: #002D44;
+                    
+                    ">
+    Faça o seu login!
 </h1>
 <div class="box-container">
     <div class="info-card">
@@ -3250,11 +3452,12 @@
                     <label class="noPoint">
                         <!-- <input type="button" onclick="logar()" name="send" value="Acessar"/> -->
                         <input style="background-color: #002D44;
-                            color: white;
-                            border-radius: 50px;
-                            border-width: 0px;
-                            padding: 2px 40px;
-                            margin-top: 30px" type="button" onclick="Wapp.FF.Access()" name="send" value="Acessar" />
+                                            color: white;
+                                            border-radius: 50px;
+                                            border-width: 0px;
+                                            padding: 2px 40px;
+                                            margin-top: 30px" type="button" onclick="Wapp.FF.Access()" name="send"
+                            value="Acessar" />
                     </label>
                 </div>
             </fieldset>
@@ -3265,7 +3468,9 @@
         <p>Você será direcionado à página de cadastro.</p>
         <p>Após preencher, é só retornar em <strong>Já possuo cadastro</strong> para concluir sua compra.</p>
         <div class="button-container">
-            <button id="signupBtn">Cadastre-se gratuitamente</button>
+            <button id="signupBtn"
+                onclick="window.location.href='https://acsp.com.br/boavista-equifax-cadastre#area'">Cadastre-se
+                gratuitamente</button>
         </div>
     </div>
 
@@ -3306,10 +3511,12 @@
     });
 </script>
 
-<div class="center mb-5 flex-column">
+<div class="center mb-5 flex-column" id="qmsomos">
 
-    <h2 style="text-align: center; font-weight: 700;"> Assista e confira como nossas soluções ajudam<br>
-        seu negócio em todas as etapas do seu ciclo de crédito!</h2>
+    <h2 style="text-align: center; font-weight: 700; margin-bottom: 20px;">Assista, conheça a Associação Comercial de
+        São Paulo<br> e veja
+        como
+        podemos apoiar o seu negócio!</h2>
     <div class="ytVideo">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jhGXuS_nMOo?si=zSVBIxRYelQOJz5Q"
             title="YouTube video player" frameborder="0"
@@ -3318,62 +3525,7 @@
     </div>
 
 </div>
-<div class="imgmoba" style="background-color: #FAFAFA; height: 500px; width: 100vw; flex-direction: column;">
-    <strong>
-        <red>
-            <h1 style="text-align: center; font-weight: 800 !important;">
-                Associação Comercial<br>
-                de São Paulo e Equifax | BoaVista Inteligência de dados para empresas<br>
-            </h1>
-        </red>
-    </strong>
-    <h1 style="text-align: center; padding: 10px 50px">
-        Conheça as vantagens
-        de utilizar nosso serviço
-        de análise de crédito.
-    </h1>
-    <div id="caroasoca" class="carousel slide imgmoba" data-bs-ride="carousel">
-        <div class="carousel-inner" style="overflow: visible;">
-            <div class="carousel-item active ">
-                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/1.png"
-                    style="object-fit: contain; width: 60%; margin:  0px 20%">
-            </div>
-            <div class="carousel-item ">
-                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/2.png"
-                    style="object-fit: contain; width: 60%; margin:  0px 20%">
-            </div>
-            <div class="carousel-item ">
-                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/3.png"
-                    style="object-fit: contain; width: 60%; margin:  0px 20%">
-            </div>
-            <div class="carousel-item ">
-                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/4.png"
-                    style="object-fit: contain; width: 60%; margin:  0px 20%">
-            </div>
-            <div class="carousel-item ">
-                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/5.png"
-                    style="object-fit: contain; width: 60%; margin:  0px 20%">
-            </div>
-            <div class="carousel-item ">
-                <img src="https://teste.acsp.com.br/public/upload/gallery/bvsmui/imgs/vantagens/6.png"
-                    style="object-fit: contain; width: 60%; margin:  0px 20%">
-            </div>
 
-
-            <div class="carousel-indicators" style="margin-bottom: -1rem;">
-                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="3" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="4" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#caroasoca" data-bs-slide-to="5" aria-label="Slide 3"></button>
-            </div>
-        </div>
-    </div>
-</div>
-<img src="http://teste.acsp.com.br/public/upload/gallery/bvseqx/newFim.png" class="imgdesk"
-    style="width: 70vw; height: auto; margin-bottom: 15px;" />
 </div>
 <style>
     .bg-custom-red {
@@ -3452,7 +3604,7 @@
             <div class="row g-0">
                 <div class="col-md-4 bg-custom-red text-white">
                     <h2 class="fw-bold duviudasx" style="color: #002D44">Dúvidas<br>frequentes</h2>
-                    <img src="http://teste.acsp.com.br/public/upload/gallery/bvseqx/doda.png"
+                    <img src="http://teste.acsp.com.br/public/upload/gallery/bvseqx/mulherescrevendo.png"
                         style="object-fit: contain; width: 100%;" class="imgdesk" />
                 </div>
                 <div class="col-md-8 p-4 bodyaccordion">
@@ -3668,7 +3820,7 @@
                             d="M5.25 9C5.25 6.92894 6.92894 5.25 9 5.25C11.0711 5.25 12.75 6.92894 12.75 9C12.75 11.0711 11.0711 12.75 9 12.75C6.92894 12.75 5.25 11.0711 5.25 9ZM9 6.75C7.75736 6.75 6.75 7.75736 6.75 9C6.75 10.2426 7.75736 11.25 9 11.25C10.2426 11.25 11.25 10.2426 11.25 9C11.25 7.75736 10.2426 6.75 9 6.75Z"
                             fill="#F9FAFA"></path>
                     </svg>
-                    &nbsp;Rua Boa vista, 51 - Centro<br>
+                    &nbsp;Rua Boa Vista, 51 - Centro<br>
                     01014-911 - São Paulo - SP</p>
             </div>
         </div>
@@ -3737,101 +3889,6 @@
     </div>
 
 </div>
-<!-- <script>
-        $(document).ready(function () {
-            // Função de máscara para o campo de telefone (reutilizada nos 3 formulários)
-            let SPMaskBehavior = function (val) {
-                return val.replace(/\D/g, '').length === 11 ? '(00)00000-0000' : '(00)0000-00009';
-            };
-            let spOptions = {
-                onKeyPress: function (val, e, field, options) {
-                    field.mask(SPMaskBehavior.apply({}, arguments), options);
-                },
-                clearIfNotMatch: true
-            };
-            $("#TELEFONE").mask(SPMaskBehavior, spOptions);
-            // Função para validar campos do formulário (reutilizada nos 3 formulários)
-            function validarCampos(form) {
-                var inputs = form.find('input[required], textarea[required], select[required]');
-                for (var i = 0; i < inputs.length; i++) {
-                    if (!inputs[i].value) {
-                        return false;
-                    }
-                }
-                return true;
-            }
-    
-            // Função para resetar o formulário após envio bem-sucedido
-            function resetForm(form) {
-                form.find('input[type=text], input[type=email], input[type=tel]').not("#data").val("");
-                form.find('input[type=checkbox]').prop("checked", false);
-            }
-    
-            // Unificação da lógica de validação e envio dos formulários
-            function enviarForm(form) {
-                let url = form.attr("action");
-    
-                if (validarCampos(form)) {
-                    $.ajax({
-                        url: url,
-                        method: "POST",
-                        data: form.serialize(),
-                        beforeSend: function (xhr) {
-                            xhr.setRequestHeader('Authorization', 'Basic cGFyY2Vpcm9zX2Fjc3BfaG9tb2w6cDRyY2UxcjBzX2gwbTBs');
-                            form.find('button[name=submit]').prop("disabled", true);
-                            Swal.fire({
-                                text: 'Enviando dados. Aguarde',
-                                allowOutsideClick: false
-                            });
-                            Swal.showLoading()
-                        },
-                        success: function (data) {
-                            if (data.status) {
-                                resetForm(form);
-                                Swal.fire({
-                                    text: 'OBRIGADO POR REGISTRAR SEU INTERESSE!',
-                                    icon: 'success',
-                                    confirmButtonText: "Fechar"
-                                }).then((result) => {
-                                    // Redirect to thank-you page
-                                    window.location.href = 'https://teste.acsp.com.br/pre-visualizar-pagina/ttdmw64-stage-contato';
-                                });
-                            } else {
-                                form.find('button[name=submit]').prop("disabled", false);
-                                grecaptcha.reset();
-                                Swal.fire({
-                                    text: data.msg ? data.msg : 'Erro ao enviar a mensagem',
-                                    icon: 'error',
-                                    confirmButtonText: "Fechar"
-                                });
-                            }
-                        }
-                    });
-                } else {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Por favor, preencha todos os campos antes de enviar o formulário!',
-                    });
-                }
-            }
-    
-            // Aplicação da lógica unificada nos formulários específicos
-            $('#myForm').submit(function (event) {
-                event.preventDefault();
-                $('#TELEFONE').mask(SPMaskBehavior, spOptions);
-                enviarForm($('#myForm'));
-            });
-        });
-    
-        const mobileElements = document.querySelectorAll('.mobile-only');
-    
-        if (window.innerWidth <= 576) {
-            mobileElements.forEach(element => element.style.display = 'block');
-        } else {
-            mobileElements.forEach(element => element.style.display = 'none');
-        }
-    </script> -->
 <script>
     // Valor deve conter um dos seguintes valores "Associativismo", "ACConsulta", "ACMarcas", "ACSP Legal", "Jucesp", "Declaração de Exclusividade"
     const ORGIN_PAGE = 'Associativismo'
@@ -4268,7 +4325,7 @@
         let errors = [];
 
         if (!nome) errors.push('Campo Nome é obrigatório.');
-        if (!telefone || telefone.length < 10) errors.push('Telefone inválido.');
+        if (!telefone || telefone.length < 15) errors.push('Telefone inválido.');
         if (!email || !validateEmail(email)) errors.push('E-mail inválido.');
         if (!comunicados) errors.push('Você deve concordar com a Política de Privacidade.');
         if (!validade) errors.push('Você deve selecionar uma opção.');
@@ -4285,7 +4342,7 @@
                 body: new URLSearchParams(new FormData(this)).toString(),
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
-                    'Authorization': 'Basic cGFyY2Vpcm9zX2Fjc3BfaG9tb2w6cDRyY2UxcjBzX2gwbTBs'
+                    'Authorization': 'Basic cGFyY2Vpcm9zX2Fjc3A6cDRyY2UxcjBzs'
                 }
             })
                 .then(response => response.json())
@@ -4299,7 +4356,7 @@
                             icon: 'success',
                             confirmButtonText: 'Fechar'
                         }).then(() => {
-                            window.location.href = 'https://acsp.com.br/lp-agradecimento-clube';
+                            window.location.href = 'https://acsp.com.br/boavista-equifax-agradecimento';
                         });
                     } else {
                         Swal.fire({
@@ -4318,9 +4375,36 @@
                 });
         }
     });
+    if (window.location.hash) {
+        var hash = window.location.hash;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 1000);
+    }
 
+    $('.telefone').on('input', function () {
+        let input = $(this).val();
+
+        // Remove tudo que não for número
+        input = input.replace(/\D/g, '');
+
+        // Limita ao máximo de 11 números
+        input = input.substring(0, 11);
+
+        // Adiciona os parênteses e o espaço
+        if (input.length > 2) {
+            input = input.replace(/^(\d{2})(\d)/, '($1) $2');
+        }
+
+        // Adiciona o traço
+        if (input.length > 8) {
+            input = input.replace(/(\d{5})(\d)/, '$1-$2');
+        }
+
+        // Define o valor formatado no input
+        $(this).val(input);
+    });
 </script>
-
 </body>
 
 </html>
